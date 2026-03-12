@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.hubinternational.com)",
+      "WebFetch(domain:www.marshmma.com)",
+      "WebFetch(domain:www.riskstrategies.com)",
+      "WebFetch(domain:www.usi.com)",
+      "WebFetch(domain:www.connerstrong.com)",
+      "WebFetch(domain:www.bbins.com)",
+      "WebFetch(domain:www.insureon.com)",
+      "WebFetch(domain:www.risk-strategies.com)",
+      "WebFetch(domain:www.bbrown.com)",
+      "WebFetch(domain:www.simplybusiness.com)",
+      "WebFetch(domain:www.newyorkinsurancebrokers.com)",
+      "WebFetch(domain:hubinternational.com)",
+      "WebFetch(domain:www.leavittgroup.com)",
+      "WebFetch(domain:www.alliant.com)",
+      "WebFetch(domain:www.hroskecommercial.com)"
+    ]
+  }
+}
