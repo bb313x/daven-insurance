@@ -3,667 +3,303 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>123InsureMyBiz | Commercial Insurance for NY, NJ & FL Businesses</title>
-  <meta name="description" content="Commercial insurance for SMBs in NY, NJ & FL. General Liability, Property, Workers Comp, Commercial Auto. Schedule your free Risk Review today." />
+  <title>Daven Insurance Agency | Commercial Insurance for NY, NJ & FL Businesses</title>
+  <meta name="description" content="Daven Insurance Agency — commercial insurance for SMBs in NY, NJ & FL. General Liability, Property, Workers Comp, Commercial Auto. Schedule your free Risk Review today." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Libre+Baskerville:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* ── DESIGN TOKENS ── */
     :root {
-      --ink:       #0f1117;
-      --slate:     #1c2130;
-      --slate-mid: #26303f;
-      --gold:      #c8973a;
-      --gold-lt:   #e0b45a;
-      --cream:     #f5f0e8;
-      --cream-dk:  #ede5d4;
-      --mist:      #8a95a5;
-      --white:     #ffffff;
-      --radius:    6px;
+      --ink:        #1a1c22;
+      --ink-mid:    #2e3240;
+      --navy:       #1e2a3a;
+      --navy-lt:    #253348;
+      --gold:       #b8852a;
+      --gold-lt:    #d4a04e;
+      --gold-pale:  #f5ead8;
+      --cream:      #faf8f4;
+      --cream-dk:   #f0ece3;
+      --stone:      #e8e2d8;
+      --mist:       #7a8294;
+      --white:      #ffffff;
+      --radius:     5px;
       --transition: 0.28s cubic-bezier(0.4,0,0.2,1);
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--ink);
-      overflow-x: hidden;
-    }
-
-    /* ── UTILITY ── */
-    .container { max-width: 1140px; margin: 0 auto; padding: 0 28px; }
-    .gold { color: var(--gold); }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
     .tag {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      border: 1px solid var(--gold);
-      border-radius: 2px;
-      padding: 4px 12px;
-      margin-bottom: 20px;
+      display: inline-block; font-size: 0.67rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+      border: 1px solid var(--gold); border-radius: 2px; padding: 4px 12px; margin-bottom: 20px;
     }
 
-    /* ── NAV ── */
+    /* LOGO */
+    .logo-mark { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; }
+    .logo-text-wrap { display: flex; flex-direction: column; line-height: 1; }
+    .logo-name {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.28rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--white);
+    }
+    .logo-sub { font-family: 'DM Sans', sans-serif; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.42); margin-top: 3px; }
+    .logo-dark .logo-name { color: var(--navy); }
+    .logo-dark .logo-sub  { color: var(--mist); }
+
+    /* NAV */
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: rgba(15,17,23,0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(200,151,58,0.15);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(26,28,34,0.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(184,133,42,0.18);
     }
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
-    }
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--white);
-      text-decoration: none;
-      letter-spacing: -0.01em;
-    }
-    .logo span { color: var(--gold); }
-    .nav-links {
-      display: flex;
-      gap: 36px;
-      list-style: none;
-    }
-    .nav-links a {
-      color: rgba(255,255,255,0.7);
-      text-decoration: none;
-      font-size: 0.88rem;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      transition: color var(--transition);
-    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.87rem; font-weight: 500; letter-spacing: 0.03em; transition: color var(--transition); }
     .nav-links a:hover { color: var(--gold-lt); }
-    .nav-cta {
-      background: var(--gold);
-      color: var(--ink) !important;
-      padding: 10px 22px;
-      border-radius: var(--radius);
-      font-weight: 600 !important;
-      transition: background var(--transition) !important;
-    }
-    .nav-cta:hover { background: var(--gold-lt) !important; color: var(--ink) !important; }
-
-    /* hamburger */
+    .nav-cta { background: var(--gold) !important; color: var(--white) !important; padding: 10px 22px !important; border-radius: var(--radius) !important; font-weight: 600 !important; }
+    .nav-cta:hover { background: var(--gold-lt) !important; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--transition); }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
 
-    /* ── HERO ── */
+    /* HERO */
     .hero {
-      background: var(--ink);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding: 120px 0 80px;
+      background: var(--navy); min-height: 100vh; display: flex; align-items: center;
+      padding: 130px 0 90px; position: relative; overflow: hidden;
     }
-    /* Subtle grid texture */
     .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(200,151,58,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(200,151,58,0.04) 1px, transparent 1px);
-      background-size: 60px 60px;
+      content: ''; position: absolute; inset: 0;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.012) 2px, rgba(255,255,255,0.012) 4px);
     }
-    /* Gold glow orb */
     .hero::after {
-      content: '';
-      position: absolute;
-      top: -200px; right: -200px;
-      width: 700px; height: 700px;
-      background: radial-gradient(circle, rgba(200,151,58,0.12) 0%, transparent 65%);
-      pointer-events: none;
+      content: ''; position: absolute; top: -300px; right: -300px; width: 900px; height: 900px;
+      background: radial-gradient(circle, rgba(184,133,42,0.1) 0%, transparent 60%); pointer-events: none;
     }
-    .hero-content { position: relative; z-index: 2; max-width: 720px; }
-    .hero-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 28px;
-      animation: fadeUp 0.7s ease both;
-    }
-    .hero-eyebrow .line { width: 40px; height: 1px; background: var(--gold); }
-    .hero-eyebrow span {
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 600;
-    }
+    .hero-content { position: relative; z-index: 2; max-width: 740px; }
+    .hero-eyebrow { display: flex; align-items: center; gap: 16px; margin-bottom: 30px; animation: fadeUp 0.7s ease both; }
+    .eyebrow-rule { width: 44px; height: 1px; background: var(--gold); }
+    .eyebrow-text { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.6rem, 5.5vw, 4.2rem);
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1.12;
-      margin-bottom: 28px;
+      font-family: 'Libre Baskerville', serif; font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700; color: var(--white); line-height: 1.14; margin-bottom: 28px;
       animation: fadeUp 0.7s 0.1s ease both;
     }
-    h1 em {
-      font-style: normal;
-      color: var(--gold);
-      display: block;
-    }
+    h1 em { font-style: italic; color: var(--gold-lt); display: block; }
     .hero-sub {
-      font-size: 1.08rem;
-      color: rgba(255,255,255,0.62);
-      line-height: 1.7;
-      max-width: 540px;
-      margin-bottom: 44px;
-      font-weight: 300;
-      animation: fadeUp 0.7s 0.2s ease both;
+      font-size: 1.05rem; color: rgba(255,255,255,0.55); line-height: 1.75; max-width: 560px;
+      margin-bottom: 46px; font-weight: 300; animation: fadeUp 0.7s 0.2s ease both;
     }
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      animation: fadeUp 0.7s 0.3s ease both;
-    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeUp 0.7s 0.3s ease both; }
     .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--gold);
-      color: var(--ink);
-      font-weight: 700;
-      font-size: 0.95rem;
-      padding: 16px 32px;
-      border-radius: var(--radius);
-      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 10px; background: var(--gold);
+      color: var(--white); font-weight: 600; font-size: 0.93rem; padding: 16px 32px;
+      border-radius: var(--radius); text-decoration: none; letter-spacing: 0.02em;
       transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-      box-shadow: 0 4px 24px rgba(200,151,58,0.35);
+      box-shadow: 0 4px 28px rgba(184,133,42,0.38);
     }
-    .btn-primary:hover {
-      background: var(--gold-lt);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(200,151,58,0.45);
-    }
-    .btn-primary svg { flex-shrink: 0; }
+    .btn-primary:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 36px rgba(184,133,42,0.45); }
     .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: transparent;
-      color: rgba(255,255,255,0.75);
-      font-weight: 500;
-      font-size: 0.95rem;
-      padding: 16px 28px;
-      border-radius: var(--radius);
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.18);
+      display: inline-flex; align-items: center; gap: 10px; background: transparent;
+      color: rgba(255,255,255,0.65); font-weight: 500; font-size: 0.93rem; padding: 16px 28px;
+      border-radius: var(--radius); text-decoration: none; border: 1px solid rgba(255,255,255,0.16);
       transition: border-color var(--transition), color var(--transition);
     }
-    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold-lt); }
+    .hero-badges { display: flex; gap: 28px; margin-top: 56px; flex-wrap: wrap; animation: fadeUp 0.7s 0.45s ease both; }
+    .badge { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,0.42); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.04em; }
+    .badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
 
-    .hero-badges {
-      display: flex;
-      gap: 32px;
-      margin-top: 60px;
-      flex-wrap: wrap;
-      animation: fadeUp 0.7s 0.45s ease both;
-    }
-    .badge {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: rgba(255,255,255,0.5);
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-    }
-    .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+    /* TRUST BAR */
+    .trust-bar { background: var(--cream-dk); border-top: 1px solid var(--stone); border-bottom: 1px solid var(--stone); padding: 20px 0; }
+    .trust-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 10px; color: var(--mist); font-size: 0.82rem; font-weight: 500; }
+    .trust-icon { color: var(--gold); }
 
-    /* ── TRUST BAR ── */
-    .trust-bar {
-      background: var(--slate);
-      border-top: 1px solid rgba(200,151,58,0.2);
-      border-bottom: 1px solid rgba(200,151,58,0.2);
-      padding: 22px 0;
-    }
-    .trust-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: rgba(255,255,255,0.6);
-      font-size: 0.83rem;
-      font-weight: 500;
-    }
-    .trust-icon { color: var(--gold); font-size: 1.1rem; }
-
-    /* ── PILLARS ── */
-    .pillars { padding: 96px 0; background: var(--cream); }
+    /* PILLARS */
+    .pillars { padding: 100px 0; background: var(--cream); }
     .section-header { text-align: center; margin-bottom: 64px; }
-    .section-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      color: var(--ink);
-      line-height: 1.18;
-      margin-bottom: 16px;
-    }
-    .section-header p {
-      color: #5a6270;
-      font-size: 1rem;
-      max-width: 520px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
+    .section-header h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.9rem, 3.8vw, 2.9rem); font-weight: 700; color: var(--ink); line-height: 1.2; margin-bottom: 16px; }
+    .section-header p { color: var(--mist); font-size: 1rem; max-width: 520px; margin: 0 auto; line-height: 1.72; }
+    .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .pillar {
-      background: var(--white);
-      border-radius: 10px;
-      padding: 44px 36px;
-      border: 1px solid rgba(0,0,0,0.06);
-      position: relative;
-      overflow: hidden;
+      background: var(--white); border-radius: 8px; padding: 44px 36px 40px;
+      border: 1px solid var(--stone); position: relative; overflow: hidden;
       transition: box-shadow var(--transition), transform var(--transition);
     }
-    .pillar:hover {
-      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-      transform: translateY(-4px);
+    .pillar:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.08); transform: translateY(-3px); }
+    .pillar-accent {
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-lt));
+      transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
     }
-    .pillar::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--gold);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform var(--transition);
-    }
-    .pillar:hover::after { transform: scaleX(1); }
-    .pillar-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 4rem;
-      font-weight: 900;
-      color: var(--cream-dk);
-      line-height: 1;
-      margin-bottom: 20px;
-      display: block;
-    }
-    .pillar h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: var(--ink);
-      margin-bottom: 14px;
-    }
-    .pillar p { color: #5a6270; line-height: 1.7; font-size: 0.95rem; }
+    .pillar:hover .pillar-accent { transform: scaleX(1); }
+    .pillar-num { font-family: 'Cormorant Garamond', serif; font-size: 3.8rem; font-weight: 700; color: var(--stone); line-height: 1; margin-bottom: 18px; display: block; }
+    .pillar h3 { font-family: 'Libre Baskerville', serif; font-size: 1.3rem; font-weight: 700; color: var(--ink); margin-bottom: 14px; }
+    .pillar p { color: var(--mist); line-height: 1.72; font-size: 0.93rem; }
 
-    /* ── COVERAGE ── */
-    .coverage { padding: 96px 0; background: var(--slate); }
+    /* COVERAGE */
+    .coverage { padding: 100px 0; background: var(--navy); }
     .coverage .section-header h2 { color: var(--white); }
-    .coverage .section-header p { color: var(--mist); }
-    .coverage-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+    .coverage .section-header p { color: rgba(255,255,255,0.45); }
+    .coverage-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
     .coverage-card {
-      background: var(--slate-mid);
-      border: 1px solid rgba(200,151,58,0.15);
-      border-radius: 10px;
-      padding: 36px;
-      display: flex;
-      gap: 24px;
-      align-items: flex-start;
-      transition: border-color var(--transition), box-shadow var(--transition);
-      cursor: default;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px; padding: 36px; display: flex; gap: 22px; align-items: flex-start;
+      transition: background var(--transition), border-color var(--transition);
     }
-    .coverage-card:hover {
-      border-color: rgba(200,151,58,0.5);
-      box-shadow: 0 0 40px rgba(200,151,58,0.07);
-    }
+    .coverage-card:hover { background: rgba(184,133,42,0.06); border-color: rgba(184,133,42,0.3); }
     .coverage-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 10px;
-      background: rgba(200,151,58,0.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 1.4rem;
+      width: 50px; height: 50px; border-radius: 8px;
+      background: rgba(184,133,42,0.12); border: 1px solid rgba(184,133,42,0.2);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.3rem;
     }
-    .coverage-body h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-    .coverage-body p { color: var(--mist); font-size: 0.9rem; line-height: 1.65; }
-    .coverage-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 14px;
-    }
-    .coverage-tag {
-      font-size: 0.72rem;
-      background: rgba(200,151,58,0.1);
-      color: var(--gold-lt);
-      border-radius: 3px;
-      padding: 3px 10px;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-    }
+    .coverage-body h3 { font-family: 'Libre Baskerville', serif; font-size: 1.1rem; color: var(--white); margin-bottom: 10px; }
+    .coverage-body p { color: rgba(255,255,255,0.45); font-size: 0.88rem; line-height: 1.68; }
+    .coverage-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+    .coverage-tag { font-size: 0.7rem; background: rgba(184,133,42,0.1); color: var(--gold-lt); border-radius: 2px; padding: 3px 10px; font-weight: 500; letter-spacing: 0.05em; }
 
-    /* ── CTA BLOCK ── */
-    .cta-block {
-      padding: 100px 0;
-      background: var(--ink);
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-block::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(200,151,58,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(200,151,58,0.03) 1px, transparent 1px);
-      background-size: 48px 48px;
-    }
-    .cta-block::after {
-      content: '';
-      position: absolute;
-      bottom: -300px; left: 50%;
-      transform: translateX(-50%);
-      width: 800px; height: 600px;
-      background: radial-gradient(ellipse, rgba(200,151,58,0.1) 0%, transparent 65%);
-      pointer-events: none;
-    }
-    .cta-inner {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      max-width: 680px;
-      margin: 0 auto;
-    }
-    .cta-inner h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4.5vw, 3.2rem);
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1.15;
-      margin-bottom: 20px;
-    }
-    .cta-inner h2 span { color: var(--gold); display: block; }
-    .cta-inner p {
-      color: rgba(255,255,255,0.55);
-      font-size: 1rem;
-      line-height: 1.7;
-      margin-bottom: 40px;
-      font-weight: 300;
-    }
-    .cta-form {
-      display: flex;
-      gap: 12px;
-      max-width: 500px;
-      margin: 0 auto 20px;
-    }
+    /* CTA BLOCK */
+    .cta-block { padding: 110px 0; background: var(--cream-dk); position: relative; overflow: hidden; }
+    .cta-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    .cta-block::after  { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    .cta-inner { text-align: center; max-width: 660px; margin: 0 auto; position: relative; z-index: 2; }
+    .cta-inner h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 700; color: var(--ink); line-height: 1.18; margin-bottom: 18px; }
+    .cta-inner h2 span { color: var(--gold); font-style: italic; display: block; }
+    .cta-inner p { color: var(--mist); font-size: 1rem; line-height: 1.75; margin-bottom: 40px; font-weight: 300; }
+    .cta-form { display: flex; gap: 12px; max-width: 520px; margin: 0 auto 18px; }
     .cta-form input {
-      flex: 1;
-      padding: 14px 20px;
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.06);
-      color: var(--white);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95rem;
-      outline: none;
-      transition: border-color var(--transition);
+      flex: 1; padding: 14px 20px; border-radius: var(--radius); border: 1px solid var(--stone);
+      background: var(--white); color: var(--ink); font-family: 'DM Sans', sans-serif;
+      font-size: 0.93rem; outline: none; transition: border-color var(--transition);
     }
-    .cta-form input::placeholder { color: rgba(255,255,255,0.35); }
     .cta-form input:focus { border-color: var(--gold); }
     .cta-form button {
-      background: var(--gold);
-      color: var(--ink);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 0.92rem;
-      padding: 14px 26px;
-      border: none;
-      border-radius: var(--radius);
-      cursor: pointer;
-      white-space: nowrap;
-      transition: background var(--transition);
+      background: var(--gold); color: var(--white); font-family: 'DM Sans', sans-serif;
+      font-weight: 600; font-size: 0.9rem; padding: 14px 26px; border: none;
+      border-radius: var(--radius); cursor: pointer; white-space: nowrap;
+      transition: background var(--transition); letter-spacing: 0.02em;
     }
     .cta-form button:hover { background: var(--gold-lt); }
-    .cta-disclaimer { color: rgba(255,255,255,0.3); font-size: 0.78rem; }
+    .cta-disclaimer { color: var(--mist); font-size: 0.78rem; }
 
-    /* ── WHY US ── */
-    .why { padding: 96px 0; background: var(--cream-dk); }
-    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .why-left h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-    .why-left p { color: #5a6270; line-height: 1.75; font-size: 0.97rem; margin-bottom: 32px; }
+    /* WHY US */
+    .why { padding: 100px 0; background: var(--white); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .why-left h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 700; line-height: 1.22; margin-bottom: 20px; color: var(--ink); }
+    .why-left p { color: var(--mist); line-height: 1.78; font-size: 0.96rem; margin-bottom: 36px; }
     .stat-row { display: flex; gap: 40px; flex-wrap: wrap; }
-    .stat { }
-    .stat-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.6rem;
-      font-weight: 900;
-      color: var(--gold);
-      line-height: 1;
-      display: block;
-    }
-    .stat-label { font-size: 0.8rem; color: #8a95a5; font-weight: 500; letter-spacing: 0.05em; margin-top: 4px; }
-
-    .why-list { display: flex; flex-direction: column; gap: 20px; }
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 700; color: var(--gold); line-height: 1; display: block; }
+    .stat-label { font-size: 0.77rem; color: var(--mist); font-weight: 500; letter-spacing: 0.06em; margin-top: 5px; text-transform: uppercase; }
+    .why-list { display: flex; flex-direction: column; gap: 16px; }
     .why-item {
-      background: var(--white);
-      border-radius: 8px;
-      padding: 24px 28px;
-      display: flex;
-      gap: 18px;
-      align-items: flex-start;
-      border: 1px solid rgba(0,0,0,0.05);
-      transition: box-shadow var(--transition);
+      background: var(--cream); border-radius: 8px; padding: 24px 28px;
+      display: flex; gap: 18px; align-items: flex-start; border: 1px solid var(--stone);
+      transition: box-shadow var(--transition), border-color var(--transition);
     }
-    .why-item:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+    .why-item:hover { box-shadow: 0 6px 28px rgba(0,0,0,0.07); border-color: var(--gold); }
     .why-check {
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      background: rgba(200,151,58,0.12);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      color: var(--gold);
-      font-size: 0.9rem;
+      width: 30px; height: 30px; border-radius: 50%; background: var(--gold-pale);
+      border: 1px solid rgba(184,133,42,0.3); display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; color: var(--gold); font-size: 0.85rem; font-weight: 700;
     }
-    .why-item h4 { font-weight: 600; font-size: 0.97rem; color: var(--ink); margin-bottom: 4px; }
-    .why-item p { font-size: 0.86rem; color: #6a7585; line-height: 1.6; }
+    .why-item h4 { font-weight: 600; font-size: 0.95rem; color: var(--ink); margin-bottom: 4px; }
+    .why-item p { font-size: 0.85rem; color: var(--mist); line-height: 1.65; }
 
-    /* ── INDUSTRIES ── */
-    .industries { padding: 80px 0; background: var(--white); }
-    .industries .section-header { margin-bottom: 48px; }
-    .industry-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-    }
+    /* INDUSTRIES */
+    .industries { padding: 80px 0; background: var(--cream-dk); }
+    .industry-chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
     .chip {
-      padding: 10px 22px;
-      border-radius: 100px;
-      border: 1px solid rgba(0,0,0,0.1);
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: #4a5568;
-      background: var(--cream);
-      transition: all var(--transition);
-      cursor: default;
+      padding: 9px 20px; border-radius: 100px; border: 1px solid var(--stone);
+      font-size: 0.86rem; font-weight: 500; color: var(--ink-mid); background: var(--white);
+      transition: all var(--transition); cursor: default;
     }
-    .chip:hover { background: var(--ink); color: var(--gold); border-color: var(--ink); }
+    .chip:hover { background: var(--navy); color: var(--gold-lt); border-color: var(--navy); }
 
-    /* ── TESTIMONIAL ── */
-    .testimonials { padding: 96px 0; background: var(--cream); }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    /* TESTIMONIALS */
+    .testimonials { padding: 100px 0; background: var(--cream); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
     .testimonial {
-      background: var(--white);
-      border-radius: 10px;
-      padding: 36px 32px;
-      border: 1px solid rgba(0,0,0,0.06);
-      position: relative;
+      background: var(--white); border-radius: 8px; padding: 36px 30px;
+      border: 1px solid var(--stone); transition: box-shadow var(--transition);
     }
-    .quote-mark {
-      font-family: 'Playfair Display', serif;
-      font-size: 5rem;
-      color: var(--cream-dk);
-      line-height: 0.6;
-      margin-bottom: 20px;
-      display: block;
-    }
-    .testimonial p { color: #4a5568; line-height: 1.72; font-size: 0.93rem; margin-bottom: 24px; }
+    .testimonial:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+    .quote-mark { font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; color: var(--gold-pale); line-height: 0.7; margin-bottom: 18px; display: block; }
+    .testimonial p { color: #4e5668; line-height: 1.74; font-size: 0.91rem; margin-bottom: 24px; }
     .testimonial-author { display: flex; gap: 12px; align-items: center; }
-    .author-avatar {
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      background: var(--slate);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-    .author-name { font-weight: 600; font-size: 0.9rem; color: var(--ink); }
-    .author-title { font-size: 0.78rem; color: var(--mist); }
+    .author-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; color: var(--gold-lt); font-weight: 700; font-size: 0.88rem; }
+    .author-name { font-weight: 600; font-size: 0.88rem; color: var(--ink); }
+    .author-title { font-size: 0.76rem; color: var(--mist); }
 
-    /* ── STATES ── */
-    .states { padding: 64px 0; background: var(--slate); }
-    .states-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 64px;
-      flex-wrap: wrap;
-    }
+    /* STATES */
+    .states { padding: 60px 0; background: var(--navy); }
+    .states-inner { display: flex; align-items: center; justify-content: center; gap: 64px; flex-wrap: wrap; }
     .state-item { text-align: center; }
-    .state-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--gold);
-      display: block;
-    }
-    .state-label { font-size: 0.78rem; color: var(--mist); letter-spacing: 0.1em; text-transform: uppercase; }
-    .state-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.1); }
+    .state-name { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: var(--gold); display: block; letter-spacing: 0.04em; }
+    .state-label { font-size: 0.72rem; color: rgba(255,255,255,0.35); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 4px; }
+    .state-divider { width: 1px; height: 56px; background: rgba(255,255,255,0.08); }
 
-    /* ── FOOTER ── */
-    footer {
-      background: var(--ink);
-      border-top: 1px solid rgba(200,151,58,0.15);
-      padding: 56px 0 32px;
-    }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-    .footer-brand .logo { font-size: 1.2rem; display: inline-block; margin-bottom: 16px; }
-    .footer-brand p { color: var(--mist); font-size: 0.88rem; line-height: 1.7; max-width: 300px; }
-    .footer-col h4 {
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
+    /* FOOTER */
+    footer { background: var(--ink); border-top: 1px solid rgba(184,133,42,0.15); padding: 60px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 52px; margin-bottom: 48px; }
+    .footer-brand p { color: var(--mist); font-size: 0.86rem; line-height: 1.72; max-width: 300px; margin-top: 14px; }
+    .footer-dba { font-size: 0.72rem; color: rgba(255,255,255,0.25); margin-top: 10px; letter-spacing: 0.04em; }
+    .footer-col h4 { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 20px; }
     .footer-col ul { list-style: none; }
     .footer-col li { margin-bottom: 10px; }
-    .footer-col a { color: var(--mist); text-decoration: none; font-size: 0.88rem; transition: color var(--transition); }
+    .footer-col a { color: var(--mist); text-decoration: none; font-size: 0.86rem; transition: color var(--transition); }
     .footer-col a:hover { color: var(--gold-lt); }
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding-top: 28px;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .footer-bottom p { color: rgba(255,255,255,0.3); font-size: 0.8rem; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 28px; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { color: rgba(255,255,255,0.25); font-size: 0.78rem; }
     .footer-links { display: flex; gap: 24px; }
-    .footer-links a { color: rgba(255,255,255,0.3); font-size: 0.8rem; text-decoration: none; transition: color var(--transition); }
+    .footer-links a { color: rgba(255,255,255,0.25); font-size: 0.78rem; text-decoration: none; transition: color var(--transition); }
     .footer-links a:hover { color: var(--gold); }
 
-    /* ── ANIMATIONS ── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(22px); }
+      from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 68px; left: 0; right: 0;
-        background: var(--ink);
-        padding: 24px 28px 32px;
-        gap: 20px;
-        border-bottom: 1px solid rgba(200,151,58,0.15);
+        display: flex; flex-direction: column; position: fixed;
+        top: 70px; left: 0; right: 0; background: var(--ink);
+        padding: 24px 28px 32px; gap: 20px;
+        border-bottom: 1px solid rgba(184,133,42,0.15); z-index: 99;
       }
       .hamburger { display: flex; }
-      .pillars-grid { grid-template-columns: 1fr; gap: 20px; }
+      .pillars-grid, .testimonials-grid { grid-template-columns: 1fr; }
       .coverage-grid { grid-template-columns: 1fr; }
-      .why-grid { grid-template-columns: 1fr; gap: 40px; }
-      .testimonials-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; gap: 44px; }
       .footer-grid { grid-template-columns: 1fr; gap: 36px; }
       .cta-form { flex-direction: column; }
       .state-divider { display: none; }
     }
     @media (max-width: 600px) {
-      .hero-badges { gap: 16px; }
-      .trust-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+      .trust-inner { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ── NAV ── -->
+  <!-- NAV -->
   <nav>
     <div class="container">
       <div class="nav-inner">
-        <a href="#" class="logo">123<span>InsureMyBiz</span></a>
+        <a href="#" class="logo-mark">
+          <svg width="36" height="40" viewBox="0 0 38 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 2 L34 8 L34 20 C34 30 26 37 19 40 C12 37 4 30 4 20 L4 8 Z" fill="none" stroke="#b8852a" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M19 7 L29 12 L29 20 C29 27.5 23.5 33 19 35.5 C14.5 33 10 27.5 10 20 L10 12 Z" fill="rgba(184,133,42,0.15)" stroke="#b8852a" stroke-width="1.2" stroke-linejoin="round"/>
+            <path d="M19 13 L23.5 19 L19 25 L14.5 19 Z" fill="#b8852a" opacity="0.95"/>
+            <circle cx="19" cy="19" r="2" fill="#1e2a3a"/>
+          </svg>
+          <div class="logo-text-wrap">
+            <span class="logo-name">Daven Insurance</span>
+          </div>
+        </a>
         <ul class="nav-links" id="navLinks">
           <li><a href="#coverage">Coverage</a></li>
-          <li><a href="#why">Why Us</a></li>
+          <li><a href="#why">Why Daven</a></li>
           <li><a href="#industries">Industries</a></li>
           <li><a href="#contact" class="nav-cta">Get Covered</a></li>
         </ul>
@@ -674,29 +310,22 @@
     </div>
   </nav>
 
-  <!-- ── HERO ── -->
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
         <div class="hero-eyebrow">
-          <span class="line"></span>
-          <span>Commercial Insurance — NY · NJ · FL</span>
+          <span class="eyebrow-rule"></span>
+          <span class="eyebrow-text">Commercial Insurance — New York · New Jersey · Florida</span>
         </div>
-        <h1>
-          Your Business Took<br>Years to Build.
-          <em>Let's Keep It That Way.</em>
-        </h1>
-        <p class="hero-sub">
-          123InsureMyBiz is a high-touch independent agency delivering Savings, Service, and Experience for SMBs across New York, New Jersey, and Florida. We don't just sell policies — we build your protection strategy.
-        </p>
+        <h1>Your Business Took<br>Years to Build.<em>Let's Keep It That Way.</em></h1>
+        <p class="hero-sub">Daven Insurance Agency is a high-touch independent agency delivering Savings, Service, and Experience for SMBs across NY, NJ, and FL. We don't just place policies — we build your protection strategy.</p>
         <div class="hero-actions">
           <a href="#contact" class="btn-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            Get Covered — Schedule Your Risk Review
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Get a Quick Quote
           </a>
-          <a href="#coverage" class="btn-secondary">
-            Explore Coverage ↓
-          </a>
+          <a href="#coverage" class="btn-secondary">Explore Coverage ↓</a>
         </div>
         <div class="hero-badges">
           <div class="badge"><span class="badge-dot"></span>General Liability</div>
@@ -708,50 +337,41 @@
     </div>
   </section>
 
-  <!-- ── TRUST BAR ── -->
+  <!-- TRUST BAR -->
   <div class="trust-bar">
     <div class="container">
       <div class="trust-inner">
-        <div class="trust-item">
-          <span class="trust-icon">✦</span>
-          Independent & Unbiased — We Work For You, Not the Carriers
-        </div>
-        <div class="trust-item">
-          <span class="trust-icon">✦</span>
-          Access to 40+ A-Rated Carriers
-        </div>
-        <div class="trust-item">
-          <span class="trust-icon">✦</span>
-          Licensed in NY · NJ · FL
-        </div>
-        <div class="trust-item">
-          <span class="trust-icon">✦</span>
-          Same-Day Certificate of Insurance
-        </div>
+        <div class="trust-item"><span class="trust-icon">✦</span> Independent & Unbiased — We Work For You</div>
+        <div class="trust-item"><span class="trust-icon">✦</span> Access to 40+ A-Rated Carriers</div>
+        <div class="trust-item"><span class="trust-icon">✦</span> Licensed in NY · NJ · FL</div>
+        <div class="trust-item"><span class="trust-icon">✦</span> Same-Day Certificate of Insurance</div>
       </div>
     </div>
   </div>
 
-  <!-- ── THREE PILLARS ── -->
+  <!-- THREE PILLARS -->
   <section class="pillars">
     <div class="container">
       <div class="section-header">
-        <div class="tag">Our Promise</div>
+        <div class="tag">The Daven Promise</div>
         <h2>Savings. Service. Experience.</h2>
-        <p>Three pillars that define every client relationship — and separate us from every other agency in the market.</p>
+        <p>Three pillars that define every client relationship — and set Daven apart from every other agency in the market.</p>
       </div>
       <div class="pillars-grid">
         <div class="pillar">
+          <div class="pillar-accent"></div>
           <span class="pillar-num">01</span>
           <h3>Savings</h3>
           <p>As an independent agency with access to 40+ carriers, we shop the entire market to find the right coverage at the right price — not the most convenient option for us. We run the numbers so you don't have to.</p>
         </div>
         <div class="pillar">
+          <div class="pillar-accent"></div>
           <span class="pillar-num">02</span>
           <h3>Service</h3>
           <p>You get a dedicated advisor — not a call center. Certificates same-day. Renewals handled proactively. Claims managed personally. We pick up the phone, answer your emails, and show up when it counts.</p>
         </div>
         <div class="pillar">
+          <div class="pillar-accent"></div>
           <span class="pillar-num">03</span>
           <h3>Experience</h3>
           <p>Commercial insurance is all we do. We know the nuances of NY contractors, NJ property owners, and FL hospitality businesses — and we use that knowledge to close coverage gaps before they become costly surprises.</p>
@@ -760,7 +380,7 @@
     </div>
   </section>
 
-  <!-- ── COVERAGE ── -->
+  <!-- COVERAGE -->
   <section class="coverage" id="coverage">
     <div class="container">
       <div class="section-header">
@@ -769,147 +389,102 @@
         <p>Four core lines. Dozens of industry specialties. One advisor who understands all of it.</p>
       </div>
       <div class="coverage-grid">
-
         <div class="coverage-card">
           <div class="coverage-icon">🛡️</div>
           <div class="coverage-body">
             <h3>General Liability</h3>
-            <p>Your first line of defense against bodily injury, property damage, and advertising liability claims. Required by most landlords and clients — we make sure you're covered at the right limits.</p>
-            <div class="coverage-tags">
-              <span class="coverage-tag">Bodily Injury</span>
-              <span class="coverage-tag">Property Damage</span>
-              <span class="coverage-tag">Products & Completed Ops</span>
-            </div>
+            <p>Your first line of defense against bodily injury, property damage, and advertising liability claims. Required by most landlords and clients — we ensure you're covered at the right limits.</p>
+            <div class="coverage-tags"><span class="coverage-tag">Bodily Injury</span><span class="coverage-tag">Property Damage</span><span class="coverage-tag">Products & Completed Ops</span></div>
           </div>
         </div>
-
         <div class="coverage-card">
           <div class="coverage-icon">🏢</div>
           <div class="coverage-body">
             <h3>Commercial Property</h3>
-            <p>Protect the physical assets your business depends on — buildings, equipment, inventory, and furnishings. We structure policies that match your actual replacement cost, not a generic estimate.</p>
-            <div class="coverage-tags">
-              <span class="coverage-tag">Building & Contents</span>
-              <span class="coverage-tag">Business Interruption</span>
-              <span class="coverage-tag">Equipment Breakdown</span>
-            </div>
+            <p>Protect the physical assets your business depends on — buildings, equipment, inventory, and furnishings. We structure policies that match actual replacement cost, not a generic estimate.</p>
+            <div class="coverage-tags"><span class="coverage-tag">Building & Contents</span><span class="coverage-tag">Business Interruption</span><span class="coverage-tag">Equipment Breakdown</span></div>
           </div>
         </div>
-
         <div class="coverage-card">
           <div class="coverage-icon">👷</div>
           <div class="coverage-body">
             <h3>Workers Compensation</h3>
-            <p>Required in NY, NJ, and FL the moment you hire your first employee. We navigate the complexity of each state's rules and connect you with carriers that specialize in your industry class.</p>
-            <div class="coverage-tags">
-              <span class="coverage-tag">Medical Benefits</span>
-              <span class="coverage-tag">Lost Wages</span>
-              <span class="coverage-tag">Employer Liability</span>
-            </div>
+            <p>Required in NY, NJ, and FL the moment you hire your first employee. We navigate each state's rules and connect you with carriers that specialize in your industry class.</p>
+            <div class="coverage-tags"><span class="coverage-tag">Medical Benefits</span><span class="coverage-tag">Lost Wages</span><span class="coverage-tag">Employer Liability</span></div>
           </div>
         </div>
-
         <div class="coverage-card">
           <div class="coverage-icon">🚛</div>
           <div class="coverage-body">
             <h3>Commercial Auto</h3>
-            <p>Whether you run a single company vehicle or a full fleet, your personal auto policy won't cover business use. We design commercial auto programs for owned, hired, and non-owned vehicles.</p>
-            <div class="coverage-tags">
-              <span class="coverage-tag">Liability & Physical Damage</span>
-              <span class="coverage-tag">Hired & Non-Owned</span>
-              <span class="coverage-tag">Fleet Programs</span>
-            </div>
+            <p>Your personal auto policy won't cover business use. We design commercial auto programs for owned, hired, and non-owned vehicles — from single units to full fleets.</p>
+            <div class="coverage-tags"><span class="coverage-tag">Liability & Physical Damage</span><span class="coverage-tag">Hired & Non-Owned</span><span class="coverage-tag">Fleet Programs</span></div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ── MAIN CTA ── -->
+  <!-- CTA BLOCK -->
   <section class="cta-block" id="contact">
     <div class="container">
       <div class="cta-inner">
         <div class="tag">No Obligation. No Pressure.</div>
-        <h2>
-          Get Covered.
-          <span>Schedule Your Insurance Risk Review.</span>
-        </h2>
-        <p>In 20 minutes, we'll walk through your current exposures, identify any coverage gaps, and show you where you might be overpaying. Leave with a clear picture — and no obligation to buy anything.</p>
+        <h2>Get a Quick Quote.<span>Know Your Numbers in Minutes.</span></h2>
+        <p>Tell us a little about your business and we'll get back to you fast with coverage options and real pricing — no runaround. And if you'd like to go deeper, we'll pair your quote with a complimentary Insurance Risk Review to make sure there are no gaps in your protection strategy.</p>
         <form class="cta-form" onsubmit="handleSubmit(event)">
           <input type="text" id="nameInput" placeholder="Your name" required />
           <input type="email" id="emailInput" placeholder="Business email" required />
-          <button type="submit">Book My Review →</button>
+          <button type="submit">Get My Quick Quote →</button>
         </form>
-        <p class="cta-disclaimer">Or call us directly: <strong style="color:rgba(255,255,255,0.6)">(800) 123-BIZMYBIZ</strong> · Mon–Fri 8am–6pm EST</p>
+        <p class="cta-disclaimer">Or call us directly: <strong style="color:var(--ink-mid)">(800) YOUR-NUMBER</strong> · Mon–Fri 8am–6pm EST</p>
       </div>
     </div>
   </section>
 
-  <!-- ── WHY US ── -->
+  <!-- WHY US -->
   <section class="why" id="why">
     <div class="container">
       <div class="why-grid">
         <div class="why-left">
-          <div class="tag">Why 123InsureMyBiz</div>
+          <div class="tag">Why Daven</div>
           <h2>An Advisor Who Knows Your Business. Not Just Your Policy Number.</h2>
-          <p>Most agencies hand you a policy and disappear until renewal. We build long-term relationships with clients who want a real partner — someone who understands their industry, tracks changes in their risk, and acts before problems arise.</p>
+          <p>Most agencies hand you a policy and disappear until renewal. Daven builds long-term relationships with clients who want a real partner — someone who understands their industry, tracks their risk, and acts before problems arise.</p>
           <div class="stat-row">
-            <div class="stat">
-              <span class="stat-num">40+</span>
-              <span class="stat-label">Carrier Partners</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">3</span>
-              <span class="stat-label">States Licensed</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">1-Day</span>
-              <span class="stat-label">COI Turnaround</span>
-            </div>
+            <div class="stat"><span class="stat-num">40+</span><span class="stat-label">Carrier Partners</span></div>
+            <div class="stat"><span class="stat-num">3</span><span class="stat-label">States Licensed</span></div>
+            <div class="stat"><span class="stat-num">1-Day</span><span class="stat-label">COI Turnaround</span></div>
           </div>
         </div>
         <div class="why-list">
           <div class="why-item">
             <div class="why-check">✓</div>
-            <div>
-              <h4>We shop the market for you</h4>
-              <p>Access to 40+ A-rated carriers means we compare real options, not just what one company offers. You get the best combination of coverage and price — every time.</p>
-            </div>
+            <div><h4>We shop the market for you</h4><p>Access to 40+ A-rated carriers means real options — not just what one company offers. Best combination of coverage and price, every time.</p></div>
           </div>
           <div class="why-item">
             <div class="why-check">✓</div>
-            <div>
-              <h4>Proactive renewals, not surprises</h4>
-              <p>We reach out 90 days before renewal, review your risk profile, and re-shop your coverage — so you never open a renewal invoice wondering if you got the best deal.</p>
-            </div>
+            <div><h4>Proactive renewals, not surprises</h4><p>We reach out 90 days before renewal, review your risk profile, and re-shop your coverage — so you never open a renewal invoice wondering if you got the best deal.</p></div>
           </div>
           <div class="why-item">
             <div class="why-check">✓</div>
-            <div>
-              <h4>Claims support when it matters most</h4>
-              <p>When you have a claim, you need an advocate — not a voicemail box. We manage the process with the carrier so you can focus on your business.</p>
-            </div>
+            <div><h4>Claims support when it matters most</h4><p>When you have a claim, you need an advocate — not a voicemail box. We manage the process with the carrier so you can focus on your business.</p></div>
           </div>
           <div class="why-item">
             <div class="why-check">✓</div>
-            <div>
-              <h4>Industry-specific expertise</h4>
-              <p>From NY contractors to FL hospitality operators, we know the coverage nuances that generic agencies miss — and we use that knowledge to close gaps before they cost you.</p>
-            </div>
+            <div><h4>Industry-specific expertise</h4><p>From NY contractors to FL hospitality operators, we know the coverage nuances generic agencies miss — and we close gaps before they cost you.</p></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── INDUSTRIES ── -->
+  <!-- INDUSTRIES -->
   <section class="industries" id="industries">
     <div class="container">
       <div class="section-header">
         <div class="tag">Who We Serve</div>
         <h2>Built for the Businesses That Built These States</h2>
-        <p>We specialize in commercial insurance for the industries that drive NY, NJ, and FL's economy.</p>
+        <p>We specialize in commercial insurance for the industries driving NY, NJ, and FL's economy.</p>
       </div>
       <div class="industry-chips">
         <span class="chip">Contractors & Trades</span>
@@ -931,7 +506,7 @@
     </div>
   </section>
 
-  <!-- ── TESTIMONIALS ── -->
+  <!-- TESTIMONIALS -->
   <section class="testimonials">
     <div class="container">
       <div class="section-header">
@@ -941,70 +516,63 @@
       <div class="testimonials-grid">
         <div class="testimonial">
           <span class="quote-mark">"</span>
-          <p>I'd been with the same agency for 8 years and just assumed I had good coverage. In our first Risk Review, they found a gap in my completed operations coverage that could have cost me six figures. Switched immediately.</p>
+          <p>I'd been with the same agency for 8 years and assumed I had good coverage. In our first Risk Review with Daven, they found a gap in my completed operations coverage that could have cost me six figures. Switched immediately.</p>
           <div class="testimonial-author">
             <div class="author-avatar">MR</div>
-            <div>
-              <div class="author-name">Marco R.</div>
-              <div class="author-title">General Contractor · New York</div>
-            </div>
+            <div><div class="author-name">Marco R.</div><div class="author-title">General Contractor · New York</div></div>
           </div>
         </div>
         <div class="testimonial">
           <span class="quote-mark">"</span>
-          <p>Running three restaurant locations in NJ means I need someone who actually picks up the phone. Every time I've had a question or needed a COI same-day, they've delivered. That level of service is rare in this industry.</p>
+          <p>Running three restaurant locations in NJ means I need someone who actually picks up the phone. Every time I've needed a COI same-day, Daven has delivered. That level of service is rare in this industry.</p>
           <div class="testimonial-author">
             <div class="author-avatar">SF</div>
-            <div>
-              <div class="author-name">Sofia F.</div>
-              <div class="author-title">Restaurant Group Owner · New Jersey</div>
-            </div>
+            <div><div class="author-name">Sofia F.</div><div class="author-title">Restaurant Group Owner · New Jersey</div></div>
           </div>
         </div>
         <div class="testimonial">
           <span class="quote-mark">"</span>
-          <p>They re-shopped my Workers Comp at renewal and saved my landscaping business over $14,000 annually. The policy is actually better than what I had before. I refer every business owner I know to them.</p>
+          <p>Daven re-shopped my Workers Comp at renewal and saved my landscaping business over $14,000 annually — with better coverage than before. I refer every business owner I know to them.</p>
           <div class="testimonial-author">
             <div class="author-avatar">DT</div>
-            <div>
-              <div class="author-name">David T.</div>
-              <div class="author-title">Landscaping Business · Florida</div>
-            </div>
+            <div><div class="author-name">David T.</div><div class="author-title">Landscaping Business · Florida</div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── STATES ── -->
+  <!-- STATES -->
   <div class="states">
     <div class="container">
       <div class="states-inner">
-        <div class="state-item">
-          <span class="state-name">New York</span>
-          <span class="state-label">Licensed & Serving</span>
-        </div>
+        <div class="state-item"><span class="state-name">New York</span><span class="state-label">Licensed & Serving</span></div>
         <div class="state-divider"></div>
-        <div class="state-item">
-          <span class="state-name">New Jersey</span>
-          <span class="state-label">Licensed & Serving</span>
-        </div>
+        <div class="state-item"><span class="state-name">New Jersey</span><span class="state-label">Licensed & Serving</span></div>
         <div class="state-divider"></div>
-        <div class="state-item">
-          <span class="state-name">Florida</span>
-          <span class="state-label">Licensed & Serving</span>
-        </div>
+        <div class="state-item"><span class="state-name">Florida</span><span class="state-label">Licensed & Serving</span></div>
       </div>
     </div>
   </div>
 
-  <!-- ── FOOTER ── -->
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo">123<span style="color:var(--gold)">InsureMyBiz</span></a>
-          <p>A high-touch independent commercial insurance agency serving SMBs in New York, New Jersey, and Florida. Savings, Service, and Experience — since day one.</p>
+          <a href="#" class="logo-mark">
+            <svg width="30" height="34" viewBox="0 0 38 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 2 L34 8 L34 20 C34 30 26 37 19 40 C12 37 4 30 4 20 L4 8 Z" fill="none" stroke="#b8852a" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M19 7 L29 12 L29 20 C29 27.5 23.5 33 19 35.5 C14.5 33 10 27.5 10 20 L10 12 Z" fill="rgba(184,133,42,0.15)" stroke="#b8852a" stroke-width="1.2" stroke-linejoin="round"/>
+              <path d="M19 13 L23.5 19 L19 25 L14.5 19 Z" fill="#b8852a" opacity="0.95"/>
+              <circle cx="19" cy="19" r="2" fill="#1e2a3a"/>
+            </svg>
+            <div class="logo-text-wrap">
+              <span class="logo-name">Daven Insurance</span>
+            </div>
+          </a>
+          <p>A high-touch independent commercial insurance agency serving SMBs in New York, New Jersey, and Florida.</p>
+          <p class="footer-dba">Daven Insurance Agency · D.B.A. InsureMyBiz123.com · Licensed in NY · NJ · FL</p>
         </div>
         <div class="footer-col">
           <h4>Coverage</h4>
@@ -1016,17 +584,17 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4>Agency</h4>
           <ul>
-            <li><a href="#why">Why Us</a></li>
+            <li><a href="#why">Why Daven</a></li>
             <li><a href="#industries">Industries</a></li>
             <li><a href="#contact">Schedule a Review</a></li>
-            <li><a href="mailto:hello@123insuremybiz.com">hello@123insuremybiz.com</a></li>
+            <li><a href="/cdn-cgi/l/email-protection#e28a878e8e8da28b8c919790878f9b808b98d3d0d1cc818d8f"><span class="__cf_email__" data-cfemail="b1d9d4dddddef1d8dfc2c4c3d4dcc8d3d8cb8083829fd2dedc">[email&#160;protected]</span></a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 123InsureMyBiz.com · All rights reserved</p>
+        <p>© 2026 Daven Insurance Agency · InsureMyBiz123.com · All rights reserved</p>
         <div class="footer-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>
@@ -1036,35 +604,16 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile nav
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => navLinks.classList.remove('open'));
-    });
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-    // CTA form — placeholder for CRM integration
     function handleSubmit(e) {
       e.preventDefault();
       const name  = document.getElementById('nameInput').value;
       const email = document.getElementById('emailInput').value;
       // TODO: Wire to CRM (HubSpot, Pipedrive, etc.)
       alert(`Thanks, ${name}! We'll reach out to ${email} within 1 business hour to schedule your Risk Review.`);
-      e.target.reset();
-    }
-
-    // Subtle scroll-based nav styling
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('nav');
-      nav.style.borderBottomColor = window.scrollY > 60
-        ? 'rgba(200,151,58,0.25)'
-        : 'rgba(200,151,58,0.15)';
-    });
-  </script>
-
-</body>
-</html>
+      e.targ
