@@ -3,169 +3,215 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daven Insurance Agency | Commercial Insurance for NY, NJ & FL Businesses</title>
-  <meta name="description" content="Daven Insurance Agency — commercial insurance for SMBs in NY, NJ & FL. General Liability, Property, Workers Comp, Commercial Auto. Schedule your free Risk Review today." />
+  <title>InsureMyBiz123 | Commercial Insurance for NY, NJ &amp; FL Businesses</title>
+  <meta name="description" content="InsureMyBiz123 — commercial insurance for SMBs in NY, NJ &amp; FL. General Liability, Property, Workers Comp, Commercial Auto. Schedule your free Risk Review today." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Libre+Baskerville:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..60,700;12..60,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --ink:        #1a1c22;
-      --ink-mid:    #2e3240;
-      --navy:       #1e2a3a;
-      --navy-lt:    #253348;
-      --gold:       #b8852a;
-      --gold-lt:    #d4a04e;
-      --gold-pale:  #f5ead8;
-      --cream:      #faf8f4;
-      --cream-dk:   #f0ece3;
-      --stone:      #e8e2d8;
-      --mist:       #7a8294;
+      --blue:       #1B4FD8;
+      --navy:       #0D1B5E;
+      --orange:     #FF6B35;
+      --bg-light:   #F7F8FF;
+      --border:     #eef0ff;
+      --ink:        #111111;
+      --mist:       #666666;
       --white:      #ffffff;
-      --radius:     5px;
-      --transition: 0.28s cubic-bezier(0.4,0,0.2,1);
+      --radius:     8px;
+      --transition: 0.24s cubic-bezier(0.4,0,0.2,1);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
     .container { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
+
+    /* EYEBROW TAGS */
     .tag {
       display: inline-block; font-size: 0.67rem; font-weight: 600;
-      letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
-      border: 1px solid var(--gold); border-radius: 2px; padding: 4px 12px; margin-bottom: 20px;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange);
+      margin-bottom: 16px;
     }
 
     /* LOGO */
-    .logo-mark { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; }
+    .logo-mark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
     .logo-text-wrap { display: flex; flex-direction: column; line-height: 1; }
-    .logo-name {
-      font-family: 'Cormorant Garamond', serif; font-size: 1.28rem; font-weight: 700;
-      letter-spacing: 0.06em; text-transform: uppercase; color: var(--white);
+    .logo-wordmark {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.18rem; font-weight: 800;
+      color: var(--navy); letter-spacing: -0.02em; line-height: 1;
     }
-    .logo-sub { font-family: 'DM Sans', sans-serif; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.42); margin-top: 3px; }
-    .logo-dark .logo-name { color: var(--navy); }
-    .logo-dark .logo-sub  { color: var(--mist); }
+    .logo-wordmark .accent { color: var(--orange); }
+    .logo-tagline { font-size: 0.57rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mist); margin-top: 4px; }
 
     /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(26,28,34,0.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(184,133,42,0.18);
+      background: var(--white); border-bottom: 1.5px solid #eee;
     }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; }
-    .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
-    .nav-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.87rem; font-weight: 500; letter-spacing: 0.03em; transition: color var(--transition); }
-    .nav-links a:hover { color: var(--gold-lt); }
-    .nav-cta { background: var(--gold) !important; color: var(--white) !important; padding: 10px 22px !important; border-radius: var(--radius) !important; font-weight: 600 !important; }
-    .nav-cta:hover { background: var(--gold-lt) !important; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+    .nav-links a { color: #555; text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color var(--transition); }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta {
+      background: var(--orange) !important; color: var(--white) !important;
+      padding: 10px 22px !important; border-radius: 8px !important; font-weight: 600 !important;
+      transition: opacity var(--transition) !important;
+    }
+    .nav-cta:hover { opacity: 0.88 !important; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--ink); border-radius: 2px; }
 
     /* HERO */
-    .hero {
-      background: var(--navy); min-height: 100vh; display: flex; align-items: center;
-      padding: 130px 0 90px; position: relative; overflow: hidden;
+    .hero { background: var(--bg-light); min-height: 100vh; display: flex; align-items: center; padding: 100px 0 80px; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px; background: #E8EEFF;
+      color: var(--blue); border-radius: 100px; padding: 6px 16px;
+      font-size: 0.76rem; font-weight: 600; letter-spacing: 0.04em; margin-bottom: 22px;
     }
-    .hero::before {
-      content: ''; position: absolute; inset: 0;
-      background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.012) 2px, rgba(255,255,255,0.012) 4px);
-    }
-    .hero::after {
-      content: ''; position: absolute; top: -300px; right: -300px; width: 900px; height: 900px;
-      background: radial-gradient(circle, rgba(184,133,42,0.1) 0%, transparent 60%); pointer-events: none;
-    }
-    .hero-content { position: relative; z-index: 2; max-width: 740px; }
-    .hero-eyebrow { display: flex; align-items: center; gap: 16px; margin-bottom: 30px; animation: fadeUp 0.7s ease both; }
-    .eyebrow-rule { width: 44px; height: 1px; background: var(--gold); }
-    .eyebrow-text { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+    .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
     h1 {
-      font-family: 'Libre Baskerville', serif; font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 700; color: var(--white); line-height: 1.14; margin-bottom: 28px;
-      animation: fadeUp 0.7s 0.1s ease both;
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(2.6rem, 4.5vw, 3.4rem);
+      font-weight: 800; color: var(--navy); line-height: 1.1; letter-spacing: -0.04em; margin-bottom: 22px;
     }
-    h1 em { font-style: italic; color: var(--gold-lt); display: block; }
+    h1 .highlight { color: var(--orange); }
     .hero-sub {
-      font-size: 1.05rem; color: rgba(255,255,255,0.55); line-height: 1.75; max-width: 560px;
-      margin-bottom: 46px; font-weight: 300; animation: fadeUp 0.7s 0.2s ease both;
+      font-size: 1rem; color: var(--mist); line-height: 1.72; max-width: 480px;
+      margin-bottom: 32px; font-weight: 400;
     }
-    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeUp 0.7s 0.3s ease both; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 28px; }
     .btn-primary {
-      display: inline-flex; align-items: center; gap: 10px; background: var(--gold);
-      color: var(--white); font-weight: 600; font-size: 0.93rem; padding: 16px 32px;
-      border-radius: var(--radius); text-decoration: none; letter-spacing: 0.02em;
-      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-      box-shadow: 0 4px 28px rgba(184,133,42,0.38);
+      display: inline-flex; align-items: center; gap: 10px; background: var(--blue);
+      color: var(--white); font-weight: 600; font-size: 0.93rem; padding: 14px 28px;
+      border-radius: var(--radius); text-decoration: none;
+      transition: opacity var(--transition), transform var(--transition);
+      box-shadow: 0 4px 20px rgba(27,79,216,0.3);
     }
-    .btn-primary:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 36px rgba(184,133,42,0.45); }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
     .btn-secondary {
       display: inline-flex; align-items: center; gap: 10px; background: transparent;
-      color: rgba(255,255,255,0.65); font-weight: 500; font-size: 0.93rem; padding: 16px 28px;
-      border-radius: var(--radius); text-decoration: none; border: 1px solid rgba(255,255,255,0.16);
-      transition: border-color var(--transition), color var(--transition);
+      color: var(--blue); font-weight: 500; font-size: 0.93rem; padding: 14px 24px;
+      border-radius: var(--radius); text-decoration: none; border: 1.5px solid var(--blue);
+      transition: background var(--transition), color var(--transition);
     }
-    .btn-secondary:hover { border-color: var(--gold); color: var(--gold-lt); }
-    .hero-badges { display: flex; gap: 28px; margin-top: 56px; flex-wrap: wrap; animation: fadeUp 0.7s 0.45s ease both; }
-    .badge { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,0.42); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.04em; }
-    .badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+    .btn-secondary:hover { background: var(--blue); color: var(--white); }
+    .hero-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .hero-tag {
+      background: var(--white); border: 1.5px solid #dde2f5; color: var(--blue);
+      border-radius: 100px; padding: 6px 16px; font-size: 0.79rem; font-weight: 500;
+    }
 
-    /* TRUST BAR */
-    .trust-bar { background: var(--cream-dk); border-top: 1px solid var(--stone); border-bottom: 1px solid var(--stone); padding: 20px 0; }
-    .trust-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-    .trust-item { display: flex; align-items: center; gap: 10px; color: var(--mist); font-size: 0.82rem; font-weight: 500; }
-    .trust-icon { color: var(--gold); }
+    /* HERO CARD */
+    .hero-card {
+      background: var(--white); border-radius: 20px; padding: 32px;
+      border: 1.5px solid var(--border); box-shadow: 0 8px 48px rgba(27,79,216,0.1);
+    }
+    .hero-card-title {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.95rem; font-weight: 700;
+      color: var(--navy); margin-bottom: 18px; letter-spacing: -0.01em;
+    }
+    .hero-card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+    .hero-card-item { background: var(--bg-light); border-radius: 12px; padding: 16px; border: 1px solid var(--border); }
+    .card-dot { width: 8px; height: 8px; border-radius: 50%; margin-bottom: 10px; display: block; }
+    .card-dot.blue   { background: var(--blue); }
+    .card-dot.orange { background: var(--orange); }
+    .card-dot.navy   { background: var(--navy); }
+    .card-dot.teal   { background: #0EA5E9; }
+    .hero-card-item h4 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.84rem; font-weight: 700;
+      color: var(--navy); margin-bottom: 4px;
+    }
+    .hero-card-item p { font-size: 0.74rem; color: var(--mist); line-height: 1.5; }
+    .hero-card-stats { display: flex; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 20px; gap: 8px; }
+    .hero-stat { text-align: center; }
+    .hero-stat-num {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.35rem; font-weight: 800;
+      color: var(--blue); display: block; letter-spacing: -0.03em;
+    }
+    .hero-stat-label { font-size: 0.66rem; color: var(--mist); font-weight: 500; margin-top: 2px; }
+
+    /* TICKER */
+    .ticker { background: var(--blue); overflow: hidden; padding: 13px 0; }
+    .ticker-track { display: flex; white-space: nowrap; animation: ticker-scroll 28s linear infinite; }
+    .ticker-item {
+      display: inline-flex; align-items: center; gap: 12px;
+      color: var(--white); font-size: 0.84rem; font-weight: 500; padding: 0 28px; flex-shrink: 0;
+    }
+    .ticker-sep { color: var(--orange); }
+    @keyframes ticker-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* SECTION HEADERS */
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-header h2 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(2rem, 3.8vw, 2.4rem);
+      font-weight: 800; color: var(--navy); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 14px;
+    }
+    .section-header p { color: var(--mist); font-size: 1rem; max-width: 520px; margin: 0 auto; line-height: 1.7; }
 
     /* PILLARS */
-    .pillars { padding: 100px 0; background: var(--cream); }
-    .section-header { text-align: center; margin-bottom: 64px; }
-    .section-header h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.9rem, 3.8vw, 2.9rem); font-weight: 700; color: var(--ink); line-height: 1.2; margin-bottom: 16px; }
-    .section-header p { color: var(--mist); font-size: 1rem; max-width: 520px; margin: 0 auto; line-height: 1.72; }
+    .pillars { padding: 100px 0; background: var(--white); }
     .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .pillar {
-      background: var(--white); border-radius: 8px; padding: 44px 36px 40px;
-      border: 1px solid var(--stone); position: relative; overflow: hidden;
-      transition: box-shadow var(--transition), transform var(--transition);
+      background: var(--bg-light); border-radius: 12px; padding: 40px 32px 36px;
+      border: 1.5px solid var(--border); position: relative; overflow: hidden;
+      transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
     }
-    .pillar:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.08); transform: translateY(-3px); }
-    .pillar-accent {
-      position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--gold), var(--gold-lt));
-      transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
+    .pillar:hover { box-shadow: 0 16px 48px rgba(27,79,216,0.1); transform: translateY(-4px); border-color: var(--blue); }
+    .pillar-icon {
+      width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center;
+      justify-content: center; font-size: 1.5rem; margin-bottom: 20px;
     }
-    .pillar:hover .pillar-accent { transform: scaleX(1); }
-    .pillar-num { font-family: 'Cormorant Garamond', serif; font-size: 3.8rem; font-weight: 700; color: var(--stone); line-height: 1; margin-bottom: 18px; display: block; }
-    .pillar h3 { font-family: 'Libre Baskerville', serif; font-size: 1.3rem; font-weight: 700; color: var(--ink); margin-bottom: 14px; }
-    .pillar p { color: var(--mist); line-height: 1.72; font-size: 0.93rem; }
+    .pillar-icon.blue   { background: #E8EEFF; }
+    .pillar-icon.orange { background: #FFF0EB; }
+    .pillar-icon.navy   { background: #E8EEFF; }
+    .pillar h3 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.15rem; font-weight: 700;
+      color: var(--navy); margin-bottom: 12px; letter-spacing: -0.01em;
+    }
+    .pillar p { color: var(--mist); line-height: 1.72; font-size: 0.92rem; }
 
     /* COVERAGE */
     .coverage { padding: 100px 0; background: var(--navy); }
     .coverage .section-header h2 { color: var(--white); }
-    .coverage .section-header p { color: rgba(255,255,255,0.45); }
+    .coverage .section-header .tag { color: var(--orange); }
+    .coverage .section-header p { color: rgba(255,255,255,0.5); }
     .coverage-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
     .coverage-card {
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 8px; padding: 36px; display: flex; gap: 22px; align-items: flex-start;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px; padding: 32px; display: flex; gap: 20px; align-items: flex-start;
       transition: background var(--transition), border-color var(--transition);
     }
-    .coverage-card:hover { background: rgba(184,133,42,0.06); border-color: rgba(184,133,42,0.3); }
+    .coverage-card:hover { background: rgba(255,107,53,0.07); border-color: rgba(255,107,53,0.3); }
     .coverage-icon {
-      width: 50px; height: 50px; border-radius: 8px;
-      background: rgba(184,133,42,0.12); border: 1px solid rgba(184,133,42,0.2);
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.3rem;
+      width: 50px; height: 50px; border-radius: 10px; background: rgba(27,79,216,0.2);
+      border: 1px solid rgba(27,79,216,0.3); display: flex; align-items: center;
+      justify-content: center; flex-shrink: 0; font-size: 1.3rem;
     }
-    .coverage-body h3 { font-family: 'Libre Baskerville', serif; font-size: 1.1rem; color: var(--white); margin-bottom: 10px; }
-    .coverage-body p { color: rgba(255,255,255,0.45); font-size: 0.88rem; line-height: 1.68; }
+    .coverage-body h3 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.05rem;
+      color: var(--white); margin-bottom: 10px; font-weight: 700;
+    }
+    .coverage-body p { color: rgba(255,255,255,0.5); font-size: 0.88rem; line-height: 1.65; }
     .coverage-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
-    .coverage-tag { font-size: 0.7rem; background: rgba(184,133,42,0.1); color: var(--gold-lt); border-radius: 2px; padding: 3px 10px; font-weight: 500; letter-spacing: 0.05em; }
+    .coverage-tag {
+      font-size: 0.7rem; background: rgba(27,79,216,0.2); color: rgba(255,255,255,0.7);
+      border-radius: 4px; padding: 3px 10px; font-weight: 500; letter-spacing: 0.04em;
+    }
 
     /* CTA BLOCK */
-    .cta-block { padding: 110px 0; background: var(--cream-dk); position: relative; overflow: hidden; }
-    .cta-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-    .cta-block::after  { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    .cta-block { padding: 100px 0; background: var(--bg-light); position: relative; overflow: hidden; }
+    .cta-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--blue), transparent); }
     .cta-inner { text-align: center; max-width: 720px; margin: 0 auto; position: relative; z-index: 2; }
-    .cta-inner h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 700; color: var(--ink); line-height: 1.18; margin-bottom: 18px; }
-    .cta-inner h2 span { color: var(--gold); font-style: italic; display: block; }
-    .cta-inner p { color: var(--mist); font-size: 1rem; line-height: 1.75; margin-bottom: 40px; font-weight: 300; }
+    .cta-inner h2 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(1.9rem, 4vw, 2.8rem);
+      font-weight: 800; color: var(--navy); line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 16px;
+    }
+    .cta-inner h2 span { color: var(--orange); display: block; }
+    .cta-inner > p { color: var(--mist); font-size: 1rem; line-height: 1.75; margin-bottom: 36px; }
     .cta-disclaimer { color: var(--mist); font-size: 0.78rem; margin-top: 20px; }
 
     /* QUOTE FORM */
@@ -173,126 +219,143 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
     .form-group { display: flex; flex-direction: column; gap: 6px; }
     .form-group label {
-      font-size: 0.72rem; font-weight: 600; color: var(--ink-mid);
+      font-size: 0.72rem; font-weight: 600; color: #444;
       letter-spacing: 0.1em; text-transform: uppercase;
     }
     .form-label-note { font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--mist); font-size: 0.72rem; }
     .form-group input:not([type="checkbox"]),
     .form-group select {
-      padding: 12px 16px; border-radius: var(--radius); border: 1px solid var(--stone);
+      padding: 12px 16px; border-radius: var(--radius); border: 1.5px solid #dde2f5;
       background: var(--white); color: var(--ink); font-family: 'DM Sans', sans-serif;
       font-size: 0.92rem; outline: none; transition: border-color var(--transition), box-shadow var(--transition);
       -webkit-appearance: none; appearance: none; width: 100%;
     }
     .form-group select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a8294' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px;
     }
     .form-group input:not([type="checkbox"]):focus,
-    .form-group select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(184,133,42,0.1); }
+    .form-group select:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(27,79,216,0.1); }
     .form-coverage { margin-bottom: 20px; }
     .checkbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
     .checkbox-item {
       display: flex; align-items: center; gap: 10px; cursor: pointer;
-      padding: 10px 14px; border-radius: var(--radius); border: 1px solid var(--stone);
+      padding: 10px 14px; border-radius: var(--radius); border: 1.5px solid #dde2f5;
       background: var(--white); transition: all var(--transition);
     }
-    .checkbox-item:hover { border-color: var(--gold); background: var(--gold-pale); }
-    .checkbox-item input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--gold); cursor: pointer; flex-shrink: 0; }
-    .checkbox-item span { font-size: 0.88rem; color: var(--ink-mid); font-weight: 500; }
+    .checkbox-item:hover { border-color: var(--blue); background: #E8EEFF; }
+    .checkbox-item input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--blue); cursor: pointer; flex-shrink: 0; }
+    .checkbox-item span { font-size: 0.88rem; color: var(--ink); font-weight: 500; }
     .quote-submit {
-      width: 100%; background: var(--gold); color: var(--white); font-family: 'DM Sans', sans-serif;
+      width: 100%; background: var(--blue); color: var(--white); font-family: 'DM Sans', sans-serif;
       font-weight: 600; font-size: 1rem; padding: 16px 32px; border: none;
       border-radius: var(--radius); cursor: pointer; letter-spacing: 0.02em; margin-top: 8px;
-      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-      box-shadow: 0 4px 20px rgba(184,133,42,0.3);
+      transition: opacity var(--transition), transform var(--transition);
+      box-shadow: 0 4px 20px rgba(27,79,216,0.25);
     }
-    .quote-submit:hover { background: var(--gold-lt); transform: translateY(-1px); box-shadow: 0 6px 28px rgba(184,133,42,0.4); }
-    .quote-submit:disabled { background: var(--mist); cursor: not-allowed; transform: none; box-shadow: none; }
+    .quote-submit:hover { opacity: 0.9; transform: translateY(-1px); }
+    .quote-submit:disabled { background: #aaa; cursor: not-allowed; transform: none; box-shadow: none; }
     .form-error {
       display: none; color: #9b2c2c; background: #fff5f5; border: 1px solid #fed7d7;
       border-radius: var(--radius); padding: 12px 16px; font-size: 0.88rem; margin-top: 14px;
     }
     .form-success { text-align: center; padding: 48px 20px; }
     .form-success-icon {
-      width: 60px; height: 60px; border-radius: 50%; background: var(--gold-pale);
-      border: 1px solid rgba(184,133,42,0.3); display: flex; align-items: center;
-      justify-content: center; margin: 0 auto 20px; font-size: 1.5rem; color: var(--gold);
+      width: 60px; height: 60px; border-radius: 50%; background: #E8EEFF;
+      border: 1.5px solid rgba(27,79,216,0.2); display: flex; align-items: center;
+      justify-content: center; margin: 0 auto 20px; font-size: 1.5rem; color: var(--blue);
     }
-    .form-success h3 { font-family: 'Libre Baskerville', serif; font-size: 1.6rem; color: var(--ink); margin-bottom: 12px; }
+    .form-success h3 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.6rem; color: var(--navy);
+      margin-bottom: 12px; font-weight: 800;
+    }
     .form-success p { color: var(--mist); font-size: 0.96rem; line-height: 1.7; }
 
     /* WHY US */
     .why { padding: 100px 0; background: var(--white); }
     .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-    .why-left h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 700; line-height: 1.22; margin-bottom: 20px; color: var(--ink); }
-    .why-left p { color: var(--mist); line-height: 1.78; font-size: 0.96rem; margin-bottom: 36px; }
+    .why-left h2 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+      font-weight: 800; line-height: 1.15; margin-bottom: 18px; color: var(--navy); letter-spacing: -0.03em;
+    }
+    .why-left p { color: var(--mist); line-height: 1.78; font-size: 0.96rem; margin-bottom: 32px; }
     .stat-row { display: flex; gap: 40px; flex-wrap: wrap; }
-    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 700; color: var(--gold); line-height: 1; display: block; }
-    .stat-label { font-size: 0.77rem; color: var(--mist); font-weight: 500; letter-spacing: 0.06em; margin-top: 5px; text-transform: uppercase; }
-    .why-list { display: flex; flex-direction: column; gap: 16px; }
+    .stat-num {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 2.6rem; font-weight: 800;
+      color: var(--blue); line-height: 1; display: block; letter-spacing: -0.03em;
+    }
+    .stat-label { font-size: 0.74rem; color: var(--mist); font-weight: 500; letter-spacing: 0.06em; margin-top: 4px; text-transform: uppercase; }
+    .why-list { display: flex; flex-direction: column; gap: 14px; }
     .why-item {
-      background: var(--cream); border-radius: 8px; padding: 24px 28px;
-      display: flex; gap: 18px; align-items: flex-start; border: 1px solid var(--stone);
+      background: var(--bg-light); border-radius: 10px; padding: 22px 24px;
+      display: flex; gap: 16px; align-items: flex-start; border: 1.5px solid var(--border);
       transition: box-shadow var(--transition), border-color var(--transition);
     }
-    .why-item:hover { box-shadow: 0 6px 28px rgba(0,0,0,0.07); border-color: var(--gold); }
+    .why-item:hover { box-shadow: 0 6px 24px rgba(27,79,216,0.1); border-color: var(--blue); }
     .why-check {
-      width: 30px; height: 30px; border-radius: 50%; background: var(--gold-pale);
-      border: 1px solid rgba(184,133,42,0.3); display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; color: var(--gold); font-size: 0.85rem; font-weight: 700;
+      width: 28px; height: 28px; border-radius: 50%; background: #E8EEFF;
+      border: 1.5px solid rgba(27,79,216,0.2); display: flex; align-items: center;
+      justify-content: center; flex-shrink: 0; color: var(--blue); font-size: 0.8rem; font-weight: 700;
     }
-    .why-item h4 { font-weight: 600; font-size: 0.95rem; color: var(--ink); margin-bottom: 4px; }
-    .why-item p { font-size: 0.85rem; color: var(--mist); line-height: 1.65; }
+    .why-item h4 { font-weight: 600; font-size: 0.95rem; color: var(--navy); margin-bottom: 4px; }
+    .why-item p { font-size: 0.84rem; color: var(--mist); line-height: 1.65; }
 
     /* INDUSTRIES */
-    .industries { padding: 80px 0; background: var(--cream-dk); }
+    .industries { padding: 80px 0; background: var(--bg-light); }
     .industry-chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
     .chip {
-      padding: 9px 20px; border-radius: 100px; border: 1px solid var(--stone);
-      font-size: 0.86rem; font-weight: 500; color: var(--ink-mid); background: var(--white);
+      padding: 9px 20px; border-radius: 100px; border: 1.5px solid var(--border);
+      font-size: 0.86rem; font-weight: 500; color: var(--ink); background: var(--white);
       transition: all var(--transition); cursor: default;
     }
-    .chip:hover { background: var(--navy); color: var(--gold-lt); border-color: var(--navy); }
+    .chip:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
 
     /* TESTIMONIALS */
-    .testimonials { padding: 100px 0; background: var(--cream); }
+    .testimonials { padding: 100px 0; background: var(--white); }
     .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
     .testimonial {
-      background: var(--white); border-radius: 8px; padding: 36px 30px;
-      border: 1px solid var(--stone); transition: box-shadow var(--transition);
+      background: var(--bg-light); border-radius: 12px; padding: 32px 28px;
+      border: 1.5px solid var(--border); transition: box-shadow var(--transition);
     }
-    .testimonial:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
-    .quote-mark { font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; color: var(--gold-pale); line-height: 0.7; margin-bottom: 18px; display: block; }
-    .testimonial p { color: #4e5668; line-height: 1.74; font-size: 0.91rem; margin-bottom: 24px; }
+    .testimonial:hover { box-shadow: 0 12px 40px rgba(27,79,216,0.1); }
+    .quote-mark { font-size: 3.5rem; color: #dde2f5; line-height: 0.7; margin-bottom: 16px; display: block; font-family: Georgia, serif; }
+    .testimonial p { color: #444; line-height: 1.74; font-size: 0.91rem; margin-bottom: 24px; }
     .testimonial-author { display: flex; gap: 12px; align-items: center; }
-    .author-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; color: var(--gold-lt); font-weight: 700; font-size: 0.88rem; }
-    .author-name { font-weight: 600; font-size: 0.88rem; color: var(--ink); }
-    .author-title { font-size: 0.76rem; color: var(--mist); }
+    .author-avatar {
+      width: 40px; height: 40px; border-radius: 50%; background: var(--blue);
+      display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 700; font-size: 0.82rem;
+    }
+    .author-name { font-weight: 600; font-size: 0.88rem; color: var(--navy); }
+    .author-title { font-size: 0.75rem; color: var(--mist); }
 
     /* STATES */
     .states { padding: 60px 0; background: var(--navy); }
     .states-inner { display: flex; align-items: center; justify-content: center; gap: 64px; flex-wrap: wrap; }
     .state-item { text-align: center; }
-    .state-name { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: var(--gold); display: block; letter-spacing: 0.04em; }
-    .state-label { font-size: 0.72rem; color: rgba(255,255,255,0.35); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 4px; }
-    .state-divider { width: 1px; height: 56px; background: rgba(255,255,255,0.08); }
+    .state-name {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.8rem; font-weight: 800;
+      color: var(--white); display: block; letter-spacing: -0.02em;
+    }
+    .state-label { font-size: 0.7rem; color: rgba(255,255,255,0.35); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 4px; }
+    .state-divider { width: 1px; height: 48px; background: rgba(255,255,255,0.1); }
 
     /* FOOTER */
-    footer { background: var(--ink); border-top: 1px solid rgba(184,133,42,0.15); padding: 60px 0 32px; }
+    footer { background: var(--navy); border-top: 1px solid rgba(255,255,255,0.08); padding: 60px 0 32px; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 52px; margin-bottom: 48px; }
-    .footer-brand p { color: var(--mist); font-size: 0.86rem; line-height: 1.72; max-width: 300px; margin-top: 14px; }
-    .footer-dba { font-size: 0.72rem; color: rgba(255,255,255,0.25); margin-top: 10px; letter-spacing: 0.04em; }
-    .footer-col h4 { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 20px; }
+    .footer-logo .logo-wordmark { color: var(--white); }
+    .footer-logo .logo-tagline { color: rgba(255,255,255,0.3); }
+    .footer-brand p { color: rgba(255,255,255,0.4); font-size: 0.86rem; line-height: 1.72; max-width: 300px; margin-top: 14px; }
+    .footer-dba { font-size: 0.7rem; color: rgba(255,255,255,0.22); margin-top: 10px; line-height: 1.65; }
+    .footer-col h4 { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); font-weight: 600; margin-bottom: 18px; }
     .footer-col ul { list-style: none; }
     .footer-col li { margin-bottom: 10px; }
-    .footer-col a { color: var(--mist); text-decoration: none; font-size: 0.86rem; transition: color var(--transition); }
-    .footer-col a:hover { color: var(--gold-lt); }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 28px; flex-wrap: wrap; gap: 12px; }
-    .footer-bottom p { color: rgba(255,255,255,0.25); font-size: 0.78rem; }
+    .footer-col a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.86rem; transition: color var(--transition); }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { color: rgba(255,255,255,0.2); font-size: 0.76rem; }
     .footer-links { display: flex; gap: 24px; }
-    .footer-links a { color: rgba(255,255,255,0.25); font-size: 0.78rem; text-decoration: none; transition: color var(--transition); }
-    .footer-links a:hover { color: var(--gold); }
+    .footer-links a { color: rgba(255,255,255,0.2); font-size: 0.76rem; text-decoration: none; transition: color var(--transition); }
+    .footer-links a:hover { color: rgba(255,255,255,0.6); }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
@@ -303,11 +366,14 @@
       .nav-links { display: none; }
       .nav-links.open {
         display: flex; flex-direction: column; position: fixed;
-        top: 70px; left: 0; right: 0; background: var(--ink);
+        top: 64px; left: 0; right: 0; background: var(--white);
         padding: 24px 28px 32px; gap: 20px;
-        border-bottom: 1px solid rgba(184,133,42,0.15); z-index: 99;
+        border-bottom: 1.5px solid #eee; z-index: 99;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
       }
       .hamburger { display: flex; }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-card { display: none; }
       .pillars-grid, .testimonials-grid { grid-template-columns: 1fr; }
       .coverage-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; gap: 44px; }
@@ -317,7 +383,7 @@
       .state-divider { display: none; }
     }
     @media (max-width: 600px) {
-      .trust-inner { flex-direction: column; align-items: flex-start; }
+      h1 { font-size: 2.2rem; }
     }
   </style>
 </head>
@@ -328,19 +394,18 @@
     <div class="container">
       <div class="nav-inner">
         <a href="#" class="logo-mark">
-          <svg width="36" height="40" viewBox="0 0 38 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 2 L34 8 L34 20 C34 30 26 37 19 40 C12 37 4 30 4 20 L4 8 Z" fill="none" stroke="#b8852a" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M19 7 L29 12 L29 20 C29 27.5 23.5 33 19 35.5 C14.5 33 10 27.5 10 20 L10 12 Z" fill="rgba(184,133,42,0.15)" stroke="#b8852a" stroke-width="1.2" stroke-linejoin="round"/>
-            <path d="M19 13 L23.5 19 L19 25 L14.5 19 Z" fill="#b8852a" opacity="0.95"/>
-            <circle cx="19" cy="19" r="2" fill="#1e2a3a"/>
+          <svg width="40" height="44" viewBox="0 0 44 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 2L4 9V22C4 32.5 12 41.8 22 45C32 41.8 40 32.5 40 22V9L22 2Z" fill="#1B4FD8"/>
+            <path d="M13 23.5L19.5 30L31 18" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           <div class="logo-text-wrap">
-            <span class="logo-name">Daven Insurance</span>
+            <span class="logo-wordmark">InsureMyBiz<span class="accent">123</span></span>
+            <span class="logo-tagline">Business Insurance Made Easy</span>
           </div>
         </a>
         <ul class="nav-links" id="navLinks">
           <li><a href="#coverage">Coverage</a></li>
-          <li><a href="#why">Why Daven</a></li>
+          <li><a href="#why">Why Us</a></li>
           <li><a href="#industries">Industries</a></li>
           <li><a href="#contact" class="nav-cta">Get Covered</a></li>
         </ul>
@@ -354,39 +419,84 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-eyebrow">
-          <span class="eyebrow-rule"></span>
-          <span class="eyebrow-text">Commercial Insurance — New York · New Jersey · Florida</span>
+      <div class="hero-grid">
+        <div class="hero-left">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Commercial Insurance — NY · NJ · FL
+          </div>
+          <h1>Business Insurance<br><span class="highlight">Made Simple.</span></h1>
+          <p class="hero-sub">InsureMyBiz123 is an independent agency delivering Savings, Service, and Experience for SMBs across NY, NJ, and FL. We shop 40+ carriers so you don't have to.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Get a Free Quote
+            </a>
+            <a href="#coverage" class="btn-secondary">See Coverage ↓</a>
+          </div>
+          <div class="hero-tags">
+            <span class="hero-tag">General Liability</span>
+            <span class="hero-tag">Commercial Property</span>
+            <span class="hero-tag">Workers Comp</span>
+            <span class="hero-tag">Commercial Auto</span>
+          </div>
         </div>
-        <h1>Your Business Took<br>Years to Build.<em>Let's Keep It That Way.</em></h1>
-        <p class="hero-sub">Daven Insurance Agency is a high-touch independent agency delivering Savings, Service, and Experience for SMBs across NY, NJ, and FL. We don't just place policies — we build your protection strategy.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            Get a Quick Quote
-          </a>
-          <a href="#coverage" class="btn-secondary">Explore Coverage ↓</a>
-        </div>
-        <div class="hero-badges">
-          <div class="badge"><span class="badge-dot"></span>General Liability</div>
-          <div class="badge"><span class="badge-dot"></span>Commercial Property</div>
-          <div class="badge"><span class="badge-dot"></span>Workers Comp</div>
-          <div class="badge"><span class="badge-dot"></span>Commercial Auto</div>
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hero-card-title">Coverage We Specialize In</div>
+            <div class="hero-card-grid">
+              <div class="hero-card-item">
+                <span class="card-dot blue"></span>
+                <h4>General Liability</h4>
+                <p>Protect against third-party claims</p>
+              </div>
+              <div class="hero-card-item">
+                <span class="card-dot orange"></span>
+                <h4>Commercial Property</h4>
+                <p>Insure your business assets</p>
+              </div>
+              <div class="hero-card-item">
+                <span class="card-dot navy"></span>
+                <h4>Workers Comp</h4>
+                <p>Required in NY, NJ &amp; FL</p>
+              </div>
+              <div class="hero-card-item">
+                <span class="card-dot teal"></span>
+                <h4>Commercial Auto</h4>
+                <p>Vehicles used for business</p>
+              </div>
+            </div>
+            <div class="hero-card-stats">
+              <div class="hero-stat">
+                <span class="hero-stat-num">40+</span>
+                <div class="hero-stat-label">Carriers</div>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-num">1-Day</span>
+                <div class="hero-stat-label">Same-Day COI</div>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-num">NY·NJ·FL</span>
+                <div class="hero-stat-label">Licensed</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="container">
-      <div class="trust-inner">
-        <div class="trust-item"><span class="trust-icon">✦</span> Independent & Unbiased — We Work For You</div>
-        <div class="trust-item"><span class="trust-icon">✦</span> Access to 40+ A-Rated Carriers</div>
-        <div class="trust-item"><span class="trust-icon">✦</span> Licensed in NY · NJ · FL</div>
-        <div class="trust-item"><span class="trust-icon">✦</span> Same-Day Certificate of Insurance</div>
-      </div>
+  <!-- TICKER BAR -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item">Independent &amp; Unbiased — We Work For You <span class="ticker-sep">●</span></span>
+      <span class="ticker-item">Access to 40+ A-Rated Carriers <span class="ticker-sep">●</span></span>
+      <span class="ticker-item">Licensed in NY · NJ · FL <span class="ticker-sep">●</span></span>
+      <span class="ticker-item">Same-Day Certificate of Insurance <span class="ticker-sep">●</span></span>
+      <span class="ticker-item">Independent &amp; Unbiased — We Work For You <span class="ticker-sep">●</span></span>
+      <span class="ticker-item">Access to 40+ A-Rated Carriers <span class="ticker-sep">●</span></span>
+      <span class="ticker-item">Licensed in NY · NJ · FL <span class="ticker-sep">●</span></span>
+      <span class="ticker-item">Same-Day Certificate of Insurance <span class="ticker-sep">●</span></span>
     </div>
   </div>
 
@@ -394,26 +504,23 @@
   <section class="pillars">
     <div class="container">
       <div class="section-header">
-        <div class="tag">The Daven Promise</div>
+        <div class="tag">The InsureMyBiz123 Promise</div>
         <h2>Savings. Service. Experience.</h2>
-        <p>Three pillars that define every client relationship — and set Daven apart from every other agency in the market.</p>
+        <p>Three pillars that define every client relationship — and set InsureMyBiz123 apart from every other agency in the market.</p>
       </div>
       <div class="pillars-grid">
         <div class="pillar">
-          <div class="pillar-accent"></div>
-          <span class="pillar-num">01</span>
+          <div class="pillar-icon blue">💰</div>
           <h3>Savings</h3>
           <p>As an independent agency with access to 40+ carriers, we shop the entire market to find the right coverage at the right price — not the most convenient option for us. We run the numbers so you don't have to.</p>
         </div>
         <div class="pillar">
-          <div class="pillar-accent"></div>
-          <span class="pillar-num">02</span>
+          <div class="pillar-icon orange">🤝</div>
           <h3>Service</h3>
           <p>You get a dedicated advisor — not a call center. Certificates same-day. Renewals handled proactively. Claims managed personally. We pick up the phone, answer your emails, and show up when it counts.</p>
         </div>
         <div class="pillar">
-          <div class="pillar-accent"></div>
-          <span class="pillar-num">03</span>
+          <div class="pillar-icon navy">🎯</div>
           <h3>Experience</h3>
           <p>Commercial insurance is all we do. We know the nuances of NY contractors, NJ property owners, and FL hospitality businesses — and we use that knowledge to close coverage gaps before they become costly surprises.</p>
         </div>
@@ -435,7 +542,7 @@
           <div class="coverage-body">
             <h3>General Liability</h3>
             <p>Your first line of defense against bodily injury, property damage, and advertising liability claims. Required by most landlords and clients — we ensure you're covered at the right limits.</p>
-            <div class="coverage-tags"><span class="coverage-tag">Bodily Injury</span><span class="coverage-tag">Property Damage</span><span class="coverage-tag">Products & Completed Ops</span></div>
+            <div class="coverage-tags"><span class="coverage-tag">Bodily Injury</span><span class="coverage-tag">Property Damage</span><span class="coverage-tag">Products &amp; Completed Ops</span></div>
           </div>
         </div>
         <div class="coverage-card">
@@ -443,7 +550,7 @@
           <div class="coverage-body">
             <h3>Commercial Property</h3>
             <p>Protect the physical assets your business depends on — buildings, equipment, inventory, and furnishings. We structure policies that match actual replacement cost, not a generic estimate.</p>
-            <div class="coverage-tags"><span class="coverage-tag">Building & Contents</span><span class="coverage-tag">Business Interruption</span><span class="coverage-tag">Equipment Breakdown</span></div>
+            <div class="coverage-tags"><span class="coverage-tag">Building &amp; Contents</span><span class="coverage-tag">Business Interruption</span><span class="coverage-tag">Equipment Breakdown</span></div>
           </div>
         </div>
         <div class="coverage-card">
@@ -459,7 +566,7 @@
           <div class="coverage-body">
             <h3>Commercial Auto</h3>
             <p>Your personal auto policy won't cover business use. We design commercial auto programs for owned, hired, and non-owned vehicles — from single units to full fleets.</p>
-            <div class="coverage-tags"><span class="coverage-tag">Liability & Physical Damage</span><span class="coverage-tag">Hired & Non-Owned</span><span class="coverage-tag">Fleet Programs</span></div>
+            <div class="coverage-tags"><span class="coverage-tag">Liability &amp; Physical Damage</span><span class="coverage-tag">Hired &amp; Non-Owned</span><span class="coverage-tag">Fleet Programs</span></div>
           </div>
         </div>
       </div>
@@ -540,7 +647,7 @@
           <button type="submit" class="quote-submit" id="submitBtn">Get My Quick Quote →</button>
           <div class="form-error" id="formError">Something went wrong — please try again or call us directly.</div>
         </form>
-        <p class="cta-disclaimer">Or call us directly: <strong style="color:var(--ink-mid)">732-484-3000</strong> · Mon–Fri 8am–6pm EST</p>
+        <p class="cta-disclaimer">Or call us directly: <strong style="color:var(--navy)">732-484-3000</strong> · Mon–Fri 8am–6pm EST</p>
       </div>
     </div>
   </section>
@@ -550,9 +657,9 @@
     <div class="container">
       <div class="why-grid">
         <div class="why-left">
-          <div class="tag">Why Daven</div>
+          <div class="tag">Why InsureMyBiz123</div>
           <h2>An Advisor Who Knows Your Business. Not Just Your Policy Number.</h2>
-          <p>Most agencies hand you a policy and disappear until renewal. Daven builds long-term relationships with clients who want a real partner — someone who understands their industry, tracks their risk, and acts before problems arise.</p>
+          <p>Most agencies hand you a policy and disappear until renewal. InsureMyBiz123 builds long-term relationships with clients who want a real partner — someone who understands their industry, tracks their risk, and acts before problems arise.</p>
           <div class="stat-row">
             <div class="stat"><span class="stat-num">40+</span><span class="stat-label">Carrier Partners</span></div>
             <div class="stat"><span class="stat-num">3</span><span class="stat-label">States Licensed</span></div>
@@ -590,19 +697,19 @@
         <p>We specialize in commercial insurance for the industries driving NY, NJ, and FL's economy.</p>
       </div>
       <div class="industry-chips">
-        <span class="chip">Contractors & Trades</span>
-        <span class="chip">Restaurants & Food Service</span>
-        <span class="chip">Retail & Wholesale</span>
+        <span class="chip">Contractors &amp; Trades</span>
+        <span class="chip">Restaurants &amp; Food Service</span>
+        <span class="chip">Retail &amp; Wholesale</span>
         <span class="chip">Professional Services</span>
-        <span class="chip">Real Estate & Property</span>
-        <span class="chip">Transportation & Logistics</span>
-        <span class="chip">Healthcare & Medical</span>
-        <span class="chip">Hospitality & Hotels</span>
+        <span class="chip">Real Estate &amp; Property</span>
+        <span class="chip">Transportation &amp; Logistics</span>
+        <span class="chip">Healthcare &amp; Medical</span>
+        <span class="chip">Hospitality &amp; Hotels</span>
         <span class="chip">Manufacturing</span>
         <span class="chip">Technology Firms</span>
         <span class="chip">Non-Profits</span>
         <span class="chip">Cleaning Services</span>
-        <span class="chip">Auto Dealers & Repair</span>
+        <span class="chip">Auto Dealers &amp; Repair</span>
         <span class="chip">Landscaping</span>
         <span class="chip">Security Services</span>
       </div>
@@ -619,7 +726,7 @@
       <div class="testimonials-grid">
         <div class="testimonial">
           <span class="quote-mark">"</span>
-          <p>I'd been with the same agency for 8 years and assumed I had good coverage. In our first Risk Review with Daven, they found a gap in my completed operations coverage that could have cost me six figures. Switched immediately.</p>
+          <p>I'd been with the same agency for 8 years and assumed I had good coverage. In our first Risk Review with InsureMyBiz123, they found a gap in my completed operations coverage that could have cost me six figures. Switched immediately.</p>
           <div class="testimonial-author">
             <div class="author-avatar">MR</div>
             <div><div class="author-name">Marco R.</div><div class="author-title">General Contractor · New York</div></div>
@@ -627,7 +734,7 @@
         </div>
         <div class="testimonial">
           <span class="quote-mark">"</span>
-          <p>Running three restaurant locations in NJ means I need someone who actually picks up the phone. Every time I've needed a COI same-day, Daven has delivered. That level of service is rare in this industry.</p>
+          <p>Running three restaurant locations in NJ means I need someone who actually picks up the phone. Every time I've needed a COI same-day, InsureMyBiz123 has delivered. That level of service is rare in this industry.</p>
           <div class="testimonial-author">
             <div class="author-avatar">SF</div>
             <div><div class="author-name">Sofia F.</div><div class="author-title">Restaurant Group Owner · New Jersey</div></div>
@@ -635,7 +742,7 @@
         </div>
         <div class="testimonial">
           <span class="quote-mark">"</span>
-          <p>Daven re-shopped my Workers Comp at renewal and saved my landscaping business over $14,000 annually — with better coverage than before. I refer every business owner I know to them.</p>
+          <p>InsureMyBiz123 re-shopped my Workers Comp at renewal and saved my landscaping business over $14,000 annually — with better coverage than before. I refer every business owner I know to them.</p>
           <div class="testimonial-author">
             <div class="author-avatar">DT</div>
             <div><div class="author-name">David T.</div><div class="author-title">Landscaping Business · Florida</div></div>
@@ -649,11 +756,11 @@
   <div class="states">
     <div class="container">
       <div class="states-inner">
-        <div class="state-item"><span class="state-name">New York</span><span class="state-label">Licensed & Serving</span></div>
+        <div class="state-item"><span class="state-name">New York</span><span class="state-label">Licensed &amp; Serving</span></div>
         <div class="state-divider"></div>
-        <div class="state-item"><span class="state-name">New Jersey</span><span class="state-label">Licensed & Serving</span></div>
+        <div class="state-item"><span class="state-name">New Jersey</span><span class="state-label">Licensed &amp; Serving</span></div>
         <div class="state-divider"></div>
-        <div class="state-item"><span class="state-name">Florida</span><span class="state-label">Licensed & Serving</span></div>
+        <div class="state-item"><span class="state-name">Florida</span><span class="state-label">Licensed &amp; Serving</span></div>
       </div>
     </div>
   </div>
@@ -663,19 +770,18 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo-mark">
-            <svg width="30" height="34" viewBox="0 0 38 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19 2 L34 8 L34 20 C34 30 26 37 19 40 C12 37 4 30 4 20 L4 8 Z" fill="none" stroke="#b8852a" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M19 7 L29 12 L29 20 C29 27.5 23.5 33 19 35.5 C14.5 33 10 27.5 10 20 L10 12 Z" fill="rgba(184,133,42,0.15)" stroke="#b8852a" stroke-width="1.2" stroke-linejoin="round"/>
-              <path d="M19 13 L23.5 19 L19 25 L14.5 19 Z" fill="#b8852a" opacity="0.95"/>
-              <circle cx="19" cy="19" r="2" fill="#1e2a3a"/>
+          <a href="#" class="logo-mark footer-logo">
+            <svg width="36" height="40" viewBox="0 0 44 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 2L4 9V22C4 32.5 12 41.8 22 45C32 41.8 40 32.5 40 22V9L22 2Z" fill="#1B4FD8"/>
+              <path d="M13 23.5L19.5 30L31 18" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             <div class="logo-text-wrap">
-              <span class="logo-name">Daven Insurance</span>
+              <span class="logo-wordmark">InsureMyBiz<span class="accent">123</span></span>
+              <span class="logo-tagline">Business Insurance Made Easy</span>
             </div>
           </a>
           <p>A high-touch independent commercial insurance agency serving SMBs in New York, New Jersey, and Florida.</p>
-          <p class="footer-dba">Daven Insurance Agency · D.B.A. InsureMyBiz123.com · Licensed in NY · NJ · FL</p>
+          <p class="footer-dba">InsureMyBiz123.com is a trade name of Daven Insurance Agency. Licensed in NY, NJ &amp; FL.</p>
         </div>
         <div class="footer-col">
           <h4>Coverage</h4>
@@ -689,15 +795,15 @@
         <div class="footer-col">
           <h4>Agency</h4>
           <ul>
-            <li><a href="#why">Why Daven</a></li>
+            <li><a href="#why">Why InsureMyBiz123</a></li>
             <li><a href="#industries">Industries</a></li>
             <li><a href="#contact">Schedule a Review</a></li>
-            <li><a href="/cdn-cgi/l/email-protection#e28a878e8e8da28b8c919790878f9b808b98d3d0d1cc818d8f"><span class="__cf_email__" data-cfemail="b1d9d4dddddef1d8dfc2c4c3d4dcc8d3d8cb8083829fd2dedc">[email&#160;protected]</span></a></li>
+            <li><a href="mailto:bryan@insuremybiz123.com">bryan@insuremybiz123.com</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Daven Insurance Agency · InsureMyBiz123.com · All rights reserved</p>
+        <p>© 2026 InsureMyBiz123 · All rights reserved</p>
         <div class="footer-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>
@@ -707,7 +813,7 @@
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks  = document.getElementById('navLinks');
     hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
