@@ -162,25 +162,65 @@
     .cta-block { padding: 110px 0; background: var(--cream-dk); position: relative; overflow: hidden; }
     .cta-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
     .cta-block::after  { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-    .cta-inner { text-align: center; max-width: 660px; margin: 0 auto; position: relative; z-index: 2; }
+    .cta-inner { text-align: center; max-width: 720px; margin: 0 auto; position: relative; z-index: 2; }
     .cta-inner h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 700; color: var(--ink); line-height: 1.18; margin-bottom: 18px; }
     .cta-inner h2 span { color: var(--gold); font-style: italic; display: block; }
     .cta-inner p { color: var(--mist); font-size: 1rem; line-height: 1.75; margin-bottom: 40px; font-weight: 300; }
-    .cta-form { display: flex; gap: 12px; max-width: 520px; margin: 0 auto 18px; }
-    .cta-form input {
-      flex: 1; padding: 14px 20px; border-radius: var(--radius); border: 1px solid var(--stone);
+    .cta-disclaimer { color: var(--mist); font-size: 0.78rem; margin-top: 20px; }
+
+    /* QUOTE FORM */
+    .quote-form { text-align: left; margin-top: 36px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label {
+      font-size: 0.72rem; font-weight: 600; color: var(--ink-mid);
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .form-label-note { font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--mist); font-size: 0.72rem; }
+    .form-group input:not([type="checkbox"]),
+    .form-group select {
+      padding: 12px 16px; border-radius: var(--radius); border: 1px solid var(--stone);
       background: var(--white); color: var(--ink); font-family: 'DM Sans', sans-serif;
-      font-size: 0.93rem; outline: none; transition: border-color var(--transition);
+      font-size: 0.92rem; outline: none; transition: border-color var(--transition), box-shadow var(--transition);
+      -webkit-appearance: none; appearance: none; width: 100%;
     }
-    .cta-form input:focus { border-color: var(--gold); }
-    .cta-form button {
-      background: var(--gold); color: var(--white); font-family: 'DM Sans', sans-serif;
-      font-weight: 600; font-size: 0.9rem; padding: 14px 26px; border: none;
-      border-radius: var(--radius); cursor: pointer; white-space: nowrap;
-      transition: background var(--transition); letter-spacing: 0.02em;
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a8294' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px;
     }
-    .cta-form button:hover { background: var(--gold-lt); }
-    .cta-disclaimer { color: var(--mist); font-size: 0.78rem; }
+    .form-group input:not([type="checkbox"]):focus,
+    .form-group select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(184,133,42,0.1); }
+    .form-coverage { margin-bottom: 20px; }
+    .checkbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
+    .checkbox-item {
+      display: flex; align-items: center; gap: 10px; cursor: pointer;
+      padding: 10px 14px; border-radius: var(--radius); border: 1px solid var(--stone);
+      background: var(--white); transition: all var(--transition);
+    }
+    .checkbox-item:hover { border-color: var(--gold); background: var(--gold-pale); }
+    .checkbox-item input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--gold); cursor: pointer; flex-shrink: 0; }
+    .checkbox-item span { font-size: 0.88rem; color: var(--ink-mid); font-weight: 500; }
+    .quote-submit {
+      width: 100%; background: var(--gold); color: var(--white); font-family: 'DM Sans', sans-serif;
+      font-weight: 600; font-size: 1rem; padding: 16px 32px; border: none;
+      border-radius: var(--radius); cursor: pointer; letter-spacing: 0.02em; margin-top: 8px;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      box-shadow: 0 4px 20px rgba(184,133,42,0.3);
+    }
+    .quote-submit:hover { background: var(--gold-lt); transform: translateY(-1px); box-shadow: 0 6px 28px rgba(184,133,42,0.4); }
+    .quote-submit:disabled { background: var(--mist); cursor: not-allowed; transform: none; box-shadow: none; }
+    .form-error {
+      display: none; color: #9b2c2c; background: #fff5f5; border: 1px solid #fed7d7;
+      border-radius: var(--radius); padding: 12px 16px; font-size: 0.88rem; margin-top: 14px;
+    }
+    .form-success { text-align: center; padding: 48px 20px; }
+    .form-success-icon {
+      width: 60px; height: 60px; border-radius: 50%; background: var(--gold-pale);
+      border: 1px solid rgba(184,133,42,0.3); display: flex; align-items: center;
+      justify-content: center; margin: 0 auto 20px; font-size: 1.5rem; color: var(--gold);
+    }
+    .form-success h3 { font-family: 'Libre Baskerville', serif; font-size: 1.6rem; color: var(--ink); margin-bottom: 12px; }
+    .form-success p { color: var(--mist); font-size: 0.96rem; line-height: 1.7; }
 
     /* WHY US */
     .why { padding: 100px 0; background: var(--white); }
@@ -272,7 +312,8 @@
       .coverage-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; gap: 44px; }
       .footer-grid { grid-template-columns: 1fr; gap: 36px; }
-      .cta-form { flex-direction: column; }
+      .form-row { grid-template-columns: 1fr; }
+      .checkbox-grid { grid-template-columns: 1fr; }
       .state-divider { display: none; }
     }
     @media (max-width: 600px) {
@@ -432,10 +473,72 @@
         <div class="tag">No Obligation. No Pressure.</div>
         <h2>Get a Quick Quote.<span>Know Your Numbers in Minutes.</span></h2>
         <p>Tell us a little about your business and we'll get back to you fast with coverage options and real pricing — no runaround. And if you'd like to go deeper, we'll pair your quote with a complimentary Insurance Risk Review to make sure there are no gaps in your protection strategy.</p>
-        <form class="cta-form" onsubmit="handleSubmit(event)">
-          <input type="text" id="nameInput" placeholder="Your name" required />
-          <input type="email" id="emailInput" placeholder="Business email" required />
-          <button type="submit">Get My Quick Quote →</button>
+        <form class="quote-form" id="quoteForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bizName">Business Name</label>
+              <input type="text" id="bizName" placeholder="e.g. Acme Contractors LLC" required />
+            </div>
+            <div class="form-group">
+              <label for="ownerName">Owner Name</label>
+              <input type="text" id="ownerName" placeholder="First &amp; Last Name" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="emailInput">Business Email</label>
+              <input type="email" id="emailInput" placeholder="you@yourbusiness.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phoneInput">Phone Number</label>
+              <input type="tel" id="phoneInput" placeholder="(555) 000-0000" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bizType">Business Type</label>
+              <select id="bizType" required>
+                <option value="" disabled selected>Select your industry</option>
+                <option value="Retail">Retail</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Contractor">Contractor</option>
+                <option value="Professional Services">Professional Services</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="stateInput">State</label>
+              <select id="stateInput" required>
+                <option value="" disabled selected>Select your state</option>
+                <option value="NY">New York (NY)</option>
+                <option value="NJ">New Jersey (NJ)</option>
+                <option value="FL">Florida (FL)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group form-coverage">
+            <label>Coverage Needed <span class="form-label-note">(select all that apply)</span></label>
+            <div class="checkbox-grid">
+              <label class="checkbox-item">
+                <input type="checkbox" name="coverage" value="General Liability" />
+                <span>General Liability</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="coverage" value="Commercial Property" />
+                <span>Commercial Property</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="coverage" value="Workers Comp" />
+                <span>Workers Comp</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="coverage" value="Commercial Auto" />
+                <span>Commercial Auto</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="quote-submit" id="submitBtn">Get My Quick Quote →</button>
+          <div class="form-error" id="formError">Something went wrong — please try again or call us directly.</div>
         </form>
         <p class="cta-disclaimer">Or call us directly: <strong style="color:var(--ink-mid)">(800) YOUR-NUMBER</strong> · Mon–Fri 8am–6pm EST</p>
       </div>
@@ -610,10 +713,98 @@
     hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-    function handleSubmit(e) {
+    // ─── Monday.com Configuration ──────────────────────────────────────────────
+    // SECURITY NOTE: This token is visible in browser source to anyone who views
+    // page source or inspects network requests. For production, proxy this request
+    // through a serverless function (Netlify Functions, Cloudflare Workers, etc.)
+    // and store the token in your hosting provider's environment variables instead.
+    // The .env file documents the variable name for that future server-side setup.
+    const MONDAY_BOARD_ID = 18403993888;
+
+    const COL = {
+      contactInfo: 'text_mm1f9qfp',     // Contact Info — Text column (combined block)
+      leadStatus:  'color_mm1fh35p',    // Lead Status — Status column
+      leadSource:  'dropdown_mm1fkg3b', // Lead Source — Dropdown column
+      priority:    'color_mm1fpdkb',    // Priority — Status column
+    };
+    // ──────────────────────────────────────────────────────────────────────────
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    async function handleSubmit(e) {
       e.preventDefault();
-      const name  = document.getElementById('nameInput').value;
-      const email = document.getElementById('emailInput').value;
-      // TODO: Wire to CRM (HubSpot, Pipedrive, etc.)
-      alert(`Thanks, ${name}! We'll reach out to ${email} within 1 business hour to schedule your Risk Review.`);
-      e.targ
+      const btn   = document.getElementById('submitBtn');
+      const errEl = document.getElementById('formError');
+      errEl.style.display = 'none';
+      btn.disabled    = true;
+      btn.textContent = 'Sending…';
+
+      const bizName   = document.getElementById('bizName').value.trim();
+      const ownerName = document.getElementById('ownerName').value.trim();
+      const email     = document.getElementById('emailInput').value.trim();
+      const phone     = document.getElementById('phoneInput').value.trim();
+      const bizType   = document.getElementById('bizType').value;
+      const state     = document.getElementById('stateInput').value;
+      const coverage  = [...document.querySelectorAll('input[name="coverage"]:checked')]
+                          .map(cb => cb.value).join(', ') || 'Not specified';
+
+      const contactBlock = [
+        'Owner: '         + ownerName,
+        'Email: '         + email,
+        'Phone: '         + phone,
+        'Business Type: ' + bizType,
+        'Coverage: '      + coverage,
+        'State: '         + state,
+      ].join('\n');
+
+      const columnValues = {
+        [COL.contactInfo]: contactBlock,
+        [COL.leadStatus]:  { label: 'New' },
+        [COL.leadSource]:  { labels: ['Website'] },
+        [COL.priority]:    { label: 'Medium' },
+      };
+
+      const itemName = bizName;
+      const mutation = `mutation {
+        create_item(
+          board_id: ${MONDAY_BOARD_ID},
+          item_name: ${JSON.stringify(itemName)},
+          column_values: ${JSON.stringify(JSON.stringify(columnValues))}
+        ) { id }
+      }`;
+
+      try {
+        const res = await fetch('https://lively-term-4e30.bryan-boutin.workers.dev/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ query: mutation }),
+        });
+
+        const data = await res.json();
+        if (data.errors) throw new Error(data.errors[0].message);
+
+        document.getElementById('quoteForm').innerHTML = `
+          <div class="form-success">
+            <div class="form-success-icon">&#10003;</div>
+            <h3>Request Received!</h3>
+            <p>Thanks, <strong>${escapeHtml(bizName)}</strong>! We'll reach out to
+            <strong>${escapeHtml(email)}</strong> within 1 business hour.</p>
+          </div>`;
+      } catch (err) {
+        console.error('Monday.com submission error:', err);
+        errEl.style.display = 'block';
+        btn.disabled    = false;
+        btn.textContent = 'Get My Quick Quote →';
+      }
+    }
+  </script>
+</body>
+</html>
