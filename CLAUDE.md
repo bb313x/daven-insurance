@@ -1,34 +1,39 @@
-# CLAUDE.md
-
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+# CLAUDE.md — InsureMyBiz123 (daven-insurance)
 
 ## Project Overview
+Commercial insurance agency website operating as an affiliate of Daven Insurance Agency.
+- **Live URL:** insuremybiz123.com
+- **GitHub repo:** bb313x/daven-insurance
+- **Owner:** Bryan Boutins
+- **Licensed in:** NY, NJ, and FL
 
-Daven Insurance Agency — a static marketing website for an SMB commercial insurance agency serving NY, NJ, and FL. The entire site lives in a single `index.html` file with no build toolchain.
+## Tech Stack
+- Single-file HTML/CSS/JS — no frameworks, no build tools
+- **Deployment:** GitHub → Hostinger manual deploy via hPanel
+- **CRM:** Monday.com (workspace: bryanboutins-team)
 
-## Development
+## Business Context
+- Affiliate model under Daven Insurance Agency
+- Target audience: Small business owners needing commercial insurance
+- Sister businesses: Lets Grow Digital (LGD), MaxLifeMD (vitamd)
+- Recently completed a full visual rebrand
+- Previous deployment issue: Hostinger Git deploy misconfiguration was serving stale version — resolved
 
-No build step required. Serve the file directly with any HTTP server, e.g.:
+## Deployment Workflow
+1. Edit HTML file locally
+2. Commit and push to GitHub
+3. Deploy manually via Hostinger hPanel (file upload or Git deploy)
+4. Verify live site is serving latest version after each deploy
 
-```bash
-python -m http.server 8080
-# or
-npx serve .
-```
+## Coding Conventions
+- Single-file architecture is intentional — do not split into separate CSS/JS files
+- Mobile-responsive by default
+- No npm, no node_modules, no build step
+- CSS variables for all colors and design tokens
 
-## Architecture
-
-**Single-file site**: All HTML, CSS, and JavaScript is in `index.html`. There are no external JS/CSS files, no npm dependencies, and no framework.
-
-**CSS custom properties** define the color palette at the top of the `<style>` block:
-- `--navy`, `--gold`, `--cream`, `--stone` are the core brand colors.
-
-**JavaScript** (bottom of `<body>`) handles:
-- Mobile hamburger menu toggle
-- `handleSubmit()` form handler — currently shows an alert; needs wiring to a CRM (HubSpot/Pipedrive was noted as the intent)
-
-**Cloudflare email obfuscation** script is included for the contact email link.
-
-## Allowed WebFetch Domains
-
-`.claude/settings.local.json` whitelists specific competitor/industry domains for research (Hub International, Alliant, USI, Risk Strategies, etc.). Do not remove these entries.
+## What Claude Should NOT Do
+- Do not suggest multi-file architecture
+- Do not add npm dependencies or build tools
+- Do not expose any API tokens in client-side code
+- Do not redesign the brand without explicit instruction
+- Do not use placeholder copy — ask if real copy is needed
