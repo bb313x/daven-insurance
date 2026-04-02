@@ -920,7 +920,7 @@
         state: state,
         insuranceType: insuranceType,
         message: 'Coverage needed: ' + coverage,
-        source: 'InsureMyBiz123',
+        source: 'InsureMyBiz Website',
         entryPoint: 'Contact Form'
       };
 
@@ -965,7 +965,7 @@
         email: msgEmail,
         phone: msgPhone,
         message: msgMessage,
-        source: 'InsureMyBiz123',
+        source: 'InsureMyBiz Website',
         entryPoint: 'Quick Message'
       };
 
@@ -999,7 +999,7 @@
 
       const formData = {
         email: nlEmail,
-        source: 'InsureMyBiz123 - Newsletter'
+        source: 'InsureMyBiz Website - Newsletter'
       };
 
       try {
@@ -1040,7 +1040,7 @@
 })(window, "https://app.cal.com/embed/embed.js", "init");
 Cal("init", { origin: "https://cal.com" });
 Cal("ui", { theme: "light", styles: { branding: { brandColor: "#1B4FD8" } } });
-Cal("floatingButton", { calLink: "letsgrowletsgo", buttonText: "Book a Consultation", buttonColor: "#1B4FD8", buttonTextColor: "#ffffff", buttonPosition: "bottom-right" });
+Cal("floatingButton", { calLink: "letsgrowletsgo?metadata[source]=InsureMyBiz Website", buttonText: "Book a Consultation", buttonColor: "#1B4FD8", buttonTextColor: "#ffffff", buttonPosition: "bottom-right" });
 </script>
 
 </body>
