@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | InsureMyBiz123 - Commercial Insurance Broker</title>
+  <meta name="description" content="Meet the team at InsureMyBiz123. Commercial insurance specialists serving small businesses in NY, NJ, and FL." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..60,700;12..60,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --blue:       #1B4FD8;
+      --navy:       #0D1B5E;
+      --orange:     #FF6B35;
+      --bg-light:   #F7F8FF;
+      --border:     #eef0ff;
+      --ink:        #111111;
+      --mist:       #666666;
+      --white:      #ffffff;
+      --radius:     8px;
+      --transition: 0.24s cubic-bezier(0.4,0,0.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
+
+    .tag {
+      display: inline-block; font-size: 0.67rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange);
+      margin-bottom: 16px;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--white); border-bottom: 1.5px solid #eee;
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+    .nav-links a { color: #555; text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color var(--transition); }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta {
+      background: var(--orange) !important; color: var(--white) !important;
+      padding: 10px 22px !important; border-radius: 8px !important; font-weight: 600 !important;
+    }
+
+    /* HERO */
+    .hero { background: var(--bg-light); min-height: 100vh; display: flex; align-items: center; padding: 100px 0 80px; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px; background: #E8EEFF;
+      color: var(--blue); border-radius: 100px; padding: 6px 16px;
+      font-size: 0.76rem; font-weight: 600; letter-spacing: 0.04em; margin-bottom: 22px;
+    }
+    .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
+    h1 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(2.6rem, 4.5vw, 3.4rem);
+      font-weight: 800; color: var(--navy); line-height: 1.1; letter-spacing: -0.04em; margin-bottom: 22px;
+    }
+    h1 .highlight { color: var(--orange); }
+    .hero-sub {
+      font-size: 1rem; color: var(--mist); line-height: 1.72; max-width: 480px;
+      margin-bottom: 32px; font-weight: 400;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px; background: var(--blue);
+      color: var(--white); font-weight: 600; font-size: 0.93rem; padding: 14px 28px;
+      border-radius: var(--radius); text-decoration: none;
+      transition: opacity var(--transition), transform var(--transition);
+    }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    /* SECTIONS */
+    .section { padding: 100px 0; }
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-header h2 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(2rem, 3.8vw, 2.4rem);
+      font-weight: 800; color: var(--navy); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 14px;
+    }
+    .section-header p { color: var(--mist); font-size: 1rem; max-width: 520px; margin: 0 auto; line-height: 1.7; }
+
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-bottom: 80px; }
+    .story-visual {
+      background: var(--bg-light); border-radius: 12px; padding: 48px;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 400px; border: 1.5px solid var(--border);
+      font-size: 4rem;
+    }
+    .story-content h2 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 2.2rem;
+      color: var(--navy); margin-bottom: 20px; line-height: 1.2;
+    }
+    .story-content h2 .highlight { color: var(--orange); }
+    .story-content p { color: var(--mist); font-size: 1rem; line-height: 1.72; margin-bottom: 18px; }
+
+    .approach-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
+    .approach-card {
+      background: var(--bg-light); border: 1.5px solid var(--border); border-radius: 12px;
+      padding: 32px; transition: all var(--transition);
+    }
+    .approach-card:hover { border-color: var(--blue); box-shadow: 0 8px 24px rgba(27,79,216,0.1); transform: translateY(-4px); }
+    .approach-card h3 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.1rem;
+      font-weight: 700; color: var(--navy); margin-bottom: 12px; letter-spacing: -0.01em;
+    }
+    .approach-card p { color: var(--mist); font-size: 0.95rem; line-height: 1.6; }
+
+    .values-section { background: var(--bg-light); padding: 100px 0; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .value-card {
+      background: var(--white); border: 1.5px solid var(--border); border-radius: 12px;
+      padding: 36px; transition: all var(--transition);
+    }
+    .value-card:hover { border-color: var(--blue); box-shadow: 0 16px 48px rgba(27,79,216,0.1); transform: translateY(-4px); }
+    .value-icon { font-size: 2.5rem; margin-bottom: 16px; }
+    .value-card h3 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.1rem;
+      font-weight: 700; color: var(--navy); margin-bottom: 12px;
+    }
+    .value-card p { color: var(--mist); font-size: 0.95rem; line-height: 1.65; }
+
+    /* TEAM */
+    .team-section { padding: 100px 0; }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .team-member {
+      background: var(--white); border: 1.5px solid var(--border); border-radius: 12px;
+      overflow: hidden; transition: all var(--transition);
+    }
+    .team-member:hover { border-color: var(--orange); box-shadow: 0 12px 36px rgba(255,107,53,0.1); transform: translateY(-4px); }
+    .member-image { width: 100%; height: 280px; overflow: hidden; background: var(--bg-light); }
+    .member-image img { width: 100%; height: 100%; object-fit: cover; }
+    .member-info { padding: 28px; text-align: center; }
+    .member-info h3 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.1rem;
+      font-weight: 700; color: var(--navy); margin-bottom: 6px;
+    }
+    .member-title {
+      color: var(--orange); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;
+    }
+    .member-info p { color: var(--mist); font-size: 0.9rem; line-height: 1.6; }
+    .founders-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-bottom: 48px; }
+
+    /* CTA */
+    .cta-section { padding: 100px 0; }
+    .cta-box {
+      background: linear-gradient(135deg, rgba(27,79,216,0.08), rgba(255,107,53,0.06));
+      border: 1.5px solid #dde2f5; border-radius: 20px; padding: 80px 60px; text-align: center;
+    }
+    .cta-box h2 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 2.5rem;
+      color: var(--navy); margin-bottom: 20px; line-height: 1.2;
+    }
+    .cta-box h2 .highlight { color: var(--orange); }
+    .cta-box p { color: var(--mist); font-size: 1.05rem; max-width: 550px; margin: 0 auto 36px; line-height: 1.7; }
+
+    /* FOOTER */
+    .footer { padding: 60px 0 30px; border-top: 1.5px solid var(--border); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand { }
+    .footer-brand h4 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.1rem;
+      font-weight: 800; color: var(--navy);
+    }
+    .footer-brand p { color: var(--mist); font-size: 0.9rem; margin-top: 12px; line-height: 1.6; }
+    .footer-col h4 {
+      font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.85rem;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+      margin-bottom: 20px; color: var(--navy);
+    }
+    .footer-col a { display: block; font-size: 0.9rem; color: var(--mist); margin-bottom: 10px; transition: color var(--transition); }
+    .footer-col a:hover { color: var(--navy); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1.5px solid var(--border); }
+    .footer-bottom p { font-size: 0.8rem; color: var(--mist); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner container">
+    <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--navy);">InsureMyBiz</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="index.html">Coverage</a></li>
+      <li><a href="index.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn-primary nav-cta">Get Your Quote</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge"><span class="hero-badge-dot"></span> About InsureMyBiz123</div>
+        <h1>Commercial Insurance Made <span class="highlight">Simple</span></h1>
+        <p class="hero-sub">We're a team of licensed insurance brokers dedicated to helping small businesses in NY, NJ, and FL protect what they've built. No jargon. No surprises. Just the right coverage at the right price.</p>
+        <a href="contact.html" class="btn-primary" style="margin-top:28px;">Schedule a Free Review</a>
+      </div>
+      <div style="background: var(--bg-light); border-radius: 12px; padding: 48px; display: flex; align-items: center; justify-content: center; height: 400px; border: 1.5px solid var(--border); font-size: 4rem;">🛡️</div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="section">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-visual">🚀</div>
+      <div class="story-content">
+        <span class="tag">Our Story</span>
+        <h2>Built to Protect <span class="highlight">Small Business Owners</span></h2>
+        <p>InsureMyBiz123 was founded by Bryan and Kirk, two entrepreneurs who saw a gap in the market. Small business owners in New York, New Jersey, and Florida were either getting overcharged by big carriers or ignored by agents who didn't understand their specific needs.</p>
+        <p>We decided to do something different. We got our licenses. We built relationships with top-tier carriers. And we made it our mission to be the trusted advisor that every business owner deserves.</p>
+        <p>Today, we serve hundreds of small businesses — from construction firms and restaurants to professional services and retail shops. Every single client gets personalized attention and coverage that actually fits their business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Our Approach</span>
+      <h2>What Makes Us <span class="highlight">Different</span></h2>
+      <p>We believe insurance should be simple, affordable, and understandable. Here's how we deliver that.</p>
+    </div>
+    <div class="approach-grid">
+      <div class="approach-card">
+        <div style="font-size:2.2rem;margin-bottom:12px;">🎯</div>
+        <h3>Deep Local Expertise</h3>
+        <p>We know the NY, NJ, and FL markets inside and out. Regulatory differences, regional risks, local business challenges — we've got it covered.</p>
+      </div>
+      <div class="approach-card">
+        <div style="font-size:2.2rem;margin-bottom:12px;">💼</div>
+        <h3>Business-Specific Coverage</h3>
+        <p>One size doesn't fit all. Whether you're in construction, healthcare, retail, or professional services, we build coverage around your unique risks.</p>
+      </div>
+      <div class="approach-card">
+        <div style="font-size:2.2rem;margin-bottom:12px;">💬</div>
+        <h3>Clear Communication</h3>
+        <p>No insurance jargon. No confusing policy language. We explain exactly what you're covered for and why you need it.</p>
+      </div>
+      <div class="approach-card">
+        <div style="font-size:2.2rem;margin-bottom:12px;">📊</div>
+        <h3>Competitive Pricing</h3>
+        <p>We shop your coverage across multiple carriers to find you the best protection at the lowest premium. Our job is to save you money.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Our Values</span>
+      <h2>What We Stand <span class="highlight">For</span></h2>
+      <p>These principles guide every recommendation we make and every client interaction we have.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3>Trusted Advisor</h3>
+        <p>Your success is our success. We're invested in understanding your business and protecting it long-term, not just writing a policy and moving on.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⚡</div>
+        <h3>Fast & Responsive</h3>
+        <p>Questions at 5 PM? Claims on a Saturday? We're accessible when you need us. Real people answering phones, not automated systems.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">✅</div>
+        <h3>Integrity First</h3>
+        <p>We only recommend coverage you actually need. We won't sell you unnecessary add-ons just to boost commission. That's not how we operate.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🎓</div>
+        <h3>Education</h3>
+        <p>We take time to explain your risks and coverage options. An informed client is an empowered client, and that's exactly what we want.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">💡</div>
+        <h3>Solutions-Focused</h3>
+        <p>Coverage gaps? Claim issues? We solve problems. Not with excuses, but with real, practical solutions that keep your business moving.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🏆</div>
+        <h3>Licensed & Certified</h3>
+        <p>We hold full insurance licenses in NY, NJ, and FL. We stay current with regulatory changes and industry best practices every single year.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">The Team</span>
+      <h2>Meet the People <span class="highlight">Behind Your Protection</span></h2>
+      <p>A team of licensed insurance professionals dedicated to giving small business owners the protection and peace of mind they deserve.</p>
+    </div>
+
+    <h3 style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.15rem; color: var(--navy); margin-bottom: 32px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">Co-Founders</h3>
+    <div class="founders-row">
+      <div class="team-member">
+        <div class="member-image"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Bryan"></div>
+        <div class="member-info">
+          <h3>Bryan</h3>
+          <div class="member-title">Co-Founder & Strategy</div>
+          <p>Licensed insurance broker with 12+ years in commercial lines. Strategic thinker focused on building relationships and finding innovative solutions. Based in Point Pleasant, NJ.</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="member-image"><img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Kirk"></div>
+        <div class="member-info">
+          <h3>Kirk</h3>
+          <div class="member-title">Co-Founder & Business Development</div>
+          <p>Serial entrepreneur with expertise in sales, business development, and market expansion. Kirk's "Keep It Simple" approach ensures clarity in every client interaction.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.15rem; color: var(--navy); margin-bottom: 32px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">Licensed Agents & Specialists</h3>
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="member-image"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Accounts Manager"></div>
+        <div class="member-info">
+          <h3>Michelle</h3>
+          <div class="member-title">Accounts Manager</div>
+          <p>Licensed in NY, NJ, FL. 8+ years managing commercial policies. Michelle is your go-to for coverage questions, claims support, and policy updates.</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="member-image"><img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Risk Consultant"></div>
+        <div class="member-info">
+          <h3>James</h3>
+          <div class="member-title">Risk Consultant</div>
+          <p>Certified Risk Manager specializing in workers compensation and commercial liability. James identifies coverage gaps before they become problems.</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="member-image"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client Success Lead"></div>
+        <div class="member-info">
+          <h3>Amy</h3>
+          <div class="member-title">Client Success Lead</div>
+          <p>Licensed agent dedicated to client retention and satisfaction. Amy makes sure every client feels heard, understood, and properly protected.</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="member-image"><img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Support Specialist"></div>
+        <div class="member-info">
+          <h3>Robert</h3>
+          <div class="member-title">Support Specialist</div>
+          <p>Handles policy administration, claims coordination, and day-to-day support. Robert ensures smooth operations and quick resolution of any issues.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Ready to Get the Right <span class="highlight">Coverage?</span></h2>
+      <p>Let's talk about your business, your risks, and the protection you need. No obligation. No pressure. Just honest advice from people who care.</p>
+      <a href="contact.html" class="btn-primary" style="margin-top:24px;">Schedule Your Free Risk Review</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>InsureMyBiz123</h4>
+        <p>Licensed commercial insurance broker serving NY, NJ, and FL. Protecting small businesses since 2020.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Coverage</h4>
+        <ul>
+          <li><a href="#">General Liability</a></li>
+          <li><a href="#">Property Insurance</a></li>
+          <li><a href="#">Workers Comp</a></li>
+          <li><a href="#">Commercial Auto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Claims</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Licenses</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 InsureMyBiz123. All rights reserved. Licensed in NY, NJ, FL.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
